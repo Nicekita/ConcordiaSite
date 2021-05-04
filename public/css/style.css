@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+    }
+
+body{
+background-image: url(../img/bg.png);
+font-family: 'Montserrat', sans-serif;
+color:#FFFFFF;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+
+.av {
+    display: inline-block;
+    font-size: 9px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.pav {
+    margin-top: 6px;
+}
+
+
+.first {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end ;
+}
+
+
+.golosovanie button {
+    color:#95408C;
+    background-color: #FDAEE0;
+    padding: 15px 40px;
+    font-weight: 800;
+    font-size: 16px;
+    border-bottom-color: white;
+    border-bottom-width: 1.5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 10px;
+   
+}
+.golosovanie .volume {
+    background-color: #CE7DBB;
+    padding: 2px  40px;
+    font-weight: 800;
+    width: 243px;
+
+}
+
+.start-game button {
+    color:#95408C;
+    background-color: #FDAEE0;
+    font-weight: 800;
+    padding: 19px 92px;
+    font-size: 24px;
+    margin-top: 120px;
+    border-bottom-color: white;
+    border-bottom-width: 1.5px;
+  
+    
+}
+
+.start-game .volume {
+    background-color: #CE7DBB;
+    padding: 3px  40px;
+    font-weight: 800;
+    width: 376px;
+}
+
+.logo {
+    margin-top: 90px;
+    margin-left: 62px;
+}
+
+.logo2 {
+    align-self: center;
+    margin-left: 18px;  
+}
+
+.right-panel>h2{
+    text-align: right;
+    margin-bottom: 15px;
+    
+}
+ .centrel-panel{
+     margin-left: 0;
+    
+    
+}
+.right-panel .players {
+    text-align: center;
+    color:#95408C;
+    background-color: #FDAEE0;
+    padding: 17px 68px;
+    margin-bottom: 190px;
+    font-weight: 800;
+}
+
+.left-panel{
+    margin-bottom: 190px;
+}
+
+.left-panel>h2 {
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    text-align: center;
+    margin-top: 180px;
+    font-size: 36px;
+    font-weight: 700;
+    
+    
+    
+}
+.title> hr {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.double{
+    margin-top: 270px;
+}
+
+.grey{
+    background-image: url(../img/bg-img.png);
+    height: 370px;
+    padding: 0px 80px;
+}
+.right-side {
+    text-align: right;
+    font-size: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.right-side>h3 {
+    margin-bottom: 20px;
+}
+
+.left-side {
+    font-size: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.left-side>h3 {
+    margin-bottom: 20px;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    grid-column-gap: 48px ;
+    grid-row-gap: 128px;
+    margin-top: 69px;
+    
+}
+.read-more>button {
+    margin-top: 128px;
+    color:#95408C;
+    background-color: #FDAEE0;
+    padding: 19px 92px;
+    font-size: 24px;
+    font-weight: 800;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: #FDAEE0;
+    border-bottom-width: 1.5px;
+    
+    
+}
+.read-more .volume{
+    background-color: #CE7DBB;
+    padding: 2.5px  20px;
+    width: 359px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.read-more .volume2{
+    background-color: #CE7DBB;
+    padding: 2.5px  20px;
+    width: 385px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.wrapper1 {
+    max-width: 900px;
+    height: 420px;
+    background-color: #100C15;
+    padding:1px 64px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 270px;
+    
+}
+
+.block-text{
+    font-size: 24px;
+    color: lightgrey;
+    padding: 0px 2px;
+
+}
+
+.block-text .title{
+    color: white;
+    margin-top: 64px;
+    font-size: 36px;
+    width: 600;
+}
+.block-text>p{
+    padding: 2px;
+}
+
+.block-text >p>a {
+    color: white;
+    text-decoration: none;
+
+}
+.double {
+    margin-top: 330px;
+}
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;   
+    grid-column-gap: 101px; 
+    margin-top: 69px;
+}
+.grey2 {
+    margin-top: 25px;
+    background-color: lightgrey;
+    height: 202px;
+    width: 358px;
+    margin-bottom: 24px;
+}
+
+.grey1 {
+    margin-top: 25px;
+    background-color: lightgrey;
+    height: 180px;
+    width: 320px;
+    margin-bottom: 24px;
+}
+
+.grid-column> span {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 64px;
+
+}
+.title-news>h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.title-news>p {
+    margin-top: 16px;
+    text-align: center;
+
+}
+
+
+.z {
+    margin-left: 29px;
+}
+
+.pozfon1 {
+    background-image: url(../img/pozfon1.svg);
+    top: 750px; /* Положение от верхнего края */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 1600px; /* Ширина */ /* Поля */
+    min-height: 130px; /* Минимальная высота */
+    left: 0; right: 0; /* Нужно для выравнивания */
+    margin: 0px auto 0;
+    z-index: -100;
+}
+.pozfon2 {
+    background-color: #100C15;
+    top: 877px; /* Положение от верхнего края */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 1600px; /* Ширина */ /* Поля */
+    height: 1751px; /* Минимальная высота */
+    left: 0; right: 0; /* Нужно для выравнивания */
+    margin: 0px auto 0;
+    z-index: -100;
+}
+.pozfon3 {
+    background-image: url(../img/pozfon2.svg);
+    top: 2628px; /* Положение от верхнего края */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 1600px; /* Ширина */ /* Поля */
+    min-height: 129px; /* Минимальная высота */
+    left: 0; right: 0; /* Нужно для выравнивания */
+    margin: 0px auto 0;
+    z-index: -100;
+}
+.pozfon4 {
+    background-image: url(../img/pozfon1.svg);
+    top: 3457px; /* Положение от верхнего края */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 1600px; /* Ширина */ /* Поля */
+    min-height: 129px; /* Минимальная высота */
+    left: 0; right: 0; /* Нужно для выравнивания */
+    margin: 0px auto 0;
+    z-index: -100;
+}
+
+.pozfon5 {
+    background-color: #100C15;
+    top: 3584px; /* Положение от верхнего края */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 1600px; /* Ширина */ /* Поля */
+    height: 741px; /* Минимальная высота */
+    left: 0; right: 0; /* Нужно для выравнивания */
+    margin: 0px auto 0;
+    z-index: -100;
+}
+
+.pozfon6 {
+    background-image: url(../img/pozfon2.svg);
+    top: 4324px; /* Положение от верхнего края */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 1600px; /* Ширина */ /* Поля */
+    min-height: 129px; /* Минимальная высота */
+    left: 0; right: 0; /* Нужно для выравнивания */
+    margin: 0px auto 0;
+    z-index: -100;
+}
+
+
+
+
+
+
+
+
+

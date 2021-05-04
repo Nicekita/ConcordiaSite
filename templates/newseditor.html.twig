@@ -1,0 +1,17 @@
+<head>
+
+</head>
+
+<body>
+    <form name="form1" action="{{ path('newsadded') }}" method="post">
+        {{ param }}<br>
+        <input type="text" name="Author"><br>
+        Заголовок:<br>
+        <input type="text" name="Header"><br>
+        Текст<br>
+        <input type="text" name="Text"><br>
+        Дата<br>
+        <input type="date" name="Date"><br>
+        <input type="submit">
+    </form>
+</body>

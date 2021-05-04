@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+    }
+
+body{
+background-image: url(../img/bg.png);
+font-family: 'Montserrat', sans-serif;
+color:#FFFFFF;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+.second{
+    display: flex ;
+    justify-content: flex-end;
+    margin-top: 330px;
+    font-size: 18px;
+    list-style-type: none;
+    
+    
+}
+.second>nav>p{
+    color:#FFFFFF;
+    padding:0px 27px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.second>nav>li {
+    font-size: 18px;
+    font-weight: 400;
+    color:  #2C3840;
+    margin-top: 4px;
+
+}
+.help {
+    margin-left: 13px;
+}
+
+.second>nav>li>a{
+    text-decoration: none;
+    color:  #2C3840;
+    padding:0px 30px;
+    margin-top:px;
+    
+}
+.third{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.third>span{
+    font-size: 18px;
+    font-weight: 400;
+    color: #2C3840;
+    margin-top: 0px;
+}
+.wrapper>hr{
+    color: #2C3840;
+    margin-top: 148px;
+}
+
+.wrapper0 {
+    width: 1500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pozfon7 {
+    background-color: #0B070D;
+    top: 4325px; /* Положение от верхнего края */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 1600px; /* Ширина */ /* Поля */
+    height: 600px; /* Минимальная высота */
+    left: 0; right: 0; /* Нужно для выравнивания */
+    margin: 0px auto 0;
+    z-index: -1000;
+}

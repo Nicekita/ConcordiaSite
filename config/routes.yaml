@@ -1,0 +1,15 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\MainPage::index
+addnews:
+    path: /newseditor
+    controller: App\Controller\AddNews::add
+newsadded:
+    path: /newsAdd
+    controller: App\Controller\NewsAdded::added
+news:
+    path: /news
+    controller: App\Controller\NewsPage::index
