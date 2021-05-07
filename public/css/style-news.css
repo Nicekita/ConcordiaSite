@@ -12,6 +12,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+    background-color: #100C15;
 }
 
 .wrapper {
@@ -21,8 +22,8 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 64px;
-    height: 100%x;
+
+    height: 100%;
 }
 
 .grid {
@@ -30,6 +31,7 @@ body {
     grid-template-columns: 1fr 1fr;   
     grid-column-gap: 128px ;
     grid-row-gap: 64px;
+    margin-top: 85px;
 
 }
 
