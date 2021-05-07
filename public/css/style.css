@@ -341,16 +341,8 @@ background-attachment: fixed;
     z-index: -100;
 }
 
-.pozfon6 {
-    background-image: url(../img/pozfon2.svg);
-    top: 4324px; /* Положение от верхнего края */
-    position: absolute; /* Абсолютное позиционирование */
-    width: 1600px; /* Ширина */ /* Поля */
-    min-height: 129px; /* Минимальная высота */
-    left: 0; right: 0; /* Нужно для выравнивания */
-    margin: 0px auto 0;
-    z-index: -100;
-}
+
+
 
 
 

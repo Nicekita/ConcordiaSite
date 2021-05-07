@@ -11,6 +11,7 @@ color:#FFFFFF;
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
+    position: relative;
 
 }
 
@@ -72,13 +73,25 @@ background-attachment: fixed;
     margin-right: auto;
 }
 
+.pozfon6 {
+    background-image: url(../img/pozfon2.svg);
+    top: -62%; /* Положение от верхнего края */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 1600px; /* Ширина */ /* Поля */
+    min-height: 129px; /* Минимальная высота */
+    left: 0; right: 0; /* Нужно для выравнивания */
+    margin: 0px auto 0;
+    z-index: -100;
+}
 .pozfon7 {
     background-color: #0B070D;
-    top: 4325px; /* Положение от верхнего края */
+    top: -62%; /* Положение от верхнего края */
     position: absolute; /* Абсолютное позиционирование */
     width: 1600px; /* Ширина */ /* Поля */
     height: 600px; /* Минимальная высота */
-    left: 0; right: 0; /* Нужно для выравнивания */
+    left: 0;
+    right: 0; /* Нужно для выравнивания */
     margin: 0px auto 0;
     z-index: -1000;
 }
+
