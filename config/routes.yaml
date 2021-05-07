@@ -6,10 +6,10 @@ index:
     controller: App\Controller\MainPage::index
 addnews:
     path: /newseditor
-    controller: App\Controller\AddNews::add
+    controller: App\Controller\NewsController::add
 newsadded:
     path: /newsAdd
-    controller: App\Controller\NewsAdded::added
+    controller: App\Controller\NewsController::added
 news:
     path: /news
-    controller: App\Controller\NewsPage::index
+    controller: App\Controller\NewsController::index
