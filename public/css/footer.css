@@ -1,10 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
     }
 
-footer{
+.page-footer{
 
 font-family: 'Montserrat', sans-serif;
 color:#FFFFFF;
@@ -13,65 +13,89 @@ background-size: cover;
 background-attachment: fixed;
     position: relative;
 
+
 }
 
-.second{
+.page-footer__row{
     display: flex ;
     justify-content: flex-end;
-    margin-top: 330px;
+    margin-top: 234px;
     font-size: 18px;
     list-style-type: none;
-    
-    
 }
-.second>nav>p{
+
+.page-footer__wrapper{
+    max-width: 1230px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.page-footer__column{
+    z-index: 2;
+    background-color: #0B070D;
+}
+
+.nav-page-footer{
+}
+
+.nav-page-footer__title{
     color:#FFFFFF;
     padding:0px 27px;
     font-weight: 800;
     margin-bottom: 20px;
+
 }
 
-.second>nav>li {
+.nav-page-footer__item {
     font-size: 18px;
     font-weight: 400;
     color:  #2C3840;
     margin-top: 4px;
 
-}
-.help {
-    margin-left: 13px;
+
 }
 
-.second>nav>li>a{
+.nav-page-footer__link{
     text-decoration: none;
     color:  #2C3840;
     padding:0px 30px;
-    margin-top:px;
+
     
 }
-.third{
+.low-panel-footer{
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 0px;
+    margin-top: 32px;
+    margin-bottom: 64px;
 }
-.third>span{
+.low-panel-footer__title{
     font-size: 18px;
     font-weight: 400;
     color: #2C3840;
-    margin-top: 0px;
-}
-.wrapper>hr{
-    color: #2C3840;
-    margin-top: 148px;
+    margin-top: 5px;
+    z-index: 2;
+    background-color: #0B070D
 }
 
-.wrapper0 {
-    width: 1500px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.low-panel-footer__img{
+    z-index: 2;
 }
+
+.low-panel-footer__img-theme-vk{
+    margin-right: 15px;
+}
+
+.page-footer__hr{
+    color: #2C3840;
+    margin-top: 148px;
+    z-index: 1000;
+    background-color: #0B070D;
+}
+
 
 .pozfon6 {
     background-image: url(../img/pozfon2.svg);
@@ -81,7 +105,8 @@ background-attachment: fixed;
     min-height: 129px; /* Минимальная высота */
     left: 0; right: 0; /* Нужно для выравнивания */
     margin: 0px auto 0;
-    z-index: -100;
+    z-index: 2;
+    background-color: #0B070D;
 }
 .pozfon7 {
     background-color: #0B070D;
@@ -92,6 +117,6 @@ background-attachment: fixed;
     left: 0;
     right: 0; /* Нужно для выравнивания */
     margin: 0px auto 0;
-    z-index: -1000;
+    z-index: 1;
 }
 

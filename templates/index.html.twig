@@ -14,71 +14,69 @@
 {{ include('main/header.html.twig') }}
     
     <main>
-        <section>
-            <div class="wrapper">
-            <div class=first>
+        <section class="first-section">
+            <div class="first-section__wrapper wrapper">
+            <div class=first-section__panel>
              <div class="left-panel">
-               <h2>ЛИДЕРЫ <br>ГОЛОСУЮЩИХ</h2>
-               <div class="avatar">
-                   <div class="av Theorenter">
+               <h2 class="left-panel__title">ЛИДЕРЫ <br>ГОЛОСУЮЩИХ</h2>
+               <div class="left-panel__person">
+                   <div class="first-person person">
                       <img src="img/PlayerAvatarTheorenter.png" alt="">
-                      <p class="pav">Theorenter<p>
+                      <p class="person-title">Theorenter<p>
                       </div>
-                   <div class="av NiceKita z">
+                   <div class="second-person person">
                       <img src="img/PlayerAvatarNiceKita.png" alt="">
-                      <p class="pav">NiceKita</p>
+                      <p class="person-title">NiceKita</p>
                    </div>
-                   <div class=" av ControlFace z">
+                   <div class="third-person person">
                       <img src="img/PlayerAvatarControlFace.png" alt="">
-                      <p class="pav">ControlFace</p>
+                      <p class="person-title">ControlFace</p>
                    </div>
                </div>
-               <div class="golosovanie">
-               <button>ПРОГОЛОСОВАТЬ</button>
-           <div class="volume"></div>
+               <div class="left-panel-button">
+                  <button class="left-panel-button__button button_size_s">ПРОГОЛОСОВАТЬ</button>
+                  <div class="left-panel-button__shade shade_size_s"></div>
                </div>
 
              </div>
-             <div class="centrel-panel">
-                 <div class="logo">
+             <div class="central-panel">
+                 <div class="central-panel__logo-first">
                   <img src="img/logo 1.png" alt="">
                   <br>
-                  <div class="logo2">
+                  <div class="central-panel__logo-second">
                   <img src="img/logo-tet.png" alt="">
                   </div>
                  </div>
-                 <div class="start-game">
-                     <button>НАЧАТЬ ИГРУ</button>
-                     <div class="line"></div>
-                     <div class="volume"></div>
-
+                 <div class="central-panel_button">
+                     <button class="central-panel-button__button button_size_b">НАЧАТЬ ИГРУ</button>
+                     <div class="central-panel-button__shade shade"></div>
                  </div>
 
             </div>
             <div class="right-panel">
-                <h2>ИГРОКОВ НА<br> СЕРВЕРЕ</h2>
-                 <div class="players">CЕЙЧАС {{ playercount }} </div>
-                 <div class="volume"></div>
+                <h2 class="right-panel__title">ИГРОКОВ НА<br> СЕРВЕРЕ</h2>
+                 <div class="right-panel__players">CЕЙЧАС {{ playercount }} </div>
+                 <div class="right-panel__shade shade_size_s"></div>
 
             </div>
             </div>
         </div>
         <div class="pozfon1"></div>
         </section>
-        <section>
-            <div class="title"><span>О ПРОЕКТЕ</span></div>
-            <div class="wrapper">
-              <div class="grid1">
-                <div class="grey"></div>
-                <div class="left-side">
-                    <h3>КООПЕРИРУЙТЕСЬ И КОНКУРИРУЙТЕ</h3>
+        <section class="second-section">
+            <div class="second-section__title title"><span>О ПРОЕКТЕ</span></div>
+            <div class="second-section__wrapper wrapper">
+              <div class="second_section__main">
+                <div class="main-section-img"></div>
+                <div class="main-section-content">
+                    <h3 class="main-section-content__title">КООПЕРИРУЙТЕСЬ И КОНКУРИРУЙТЕ</h3>
                     <p>Объдиняйтесь с другими игроками,<br>
                         управляйте своей кооперацией,<br>
                         распределяйте земли, устанавливайте налоги,<br>
                         заключайте союзы и ведите войны.</p>
                 </div>
-                <div class=" right-side">
-                    <h3>УЧАСТВУЙТЕ В ЭКОНОМИЧЕСКОЙ ЖИЗНИ</h3>
+                <div class="main-section-content main-section-content_side_right">
+                    <h3 class="main-section-content__title">УЧАСТВУЙТЕ В ЭКОНОМИЧЕСКОЙ ЖИЗНИ</h3>
                     <p>Экономика сервера является следствием<br>
                     деятельносьти игроков: все товары на<br>
                         глобальном рынке - то, что было сбыто<br>
@@ -86,10 +84,10 @@
                                 которую вы можете заработать сбывая товары<br>
                                     на рынках.</p>
                 </div>
-                <div class="grey"></div>
-                <div class="grey"></div>
-                <div class="left-side">
-                    <h3>ИССЛЕДУЙТЕ НОВЫЙ КОНТЕНТ</h3>
+                <div class="main-section-img"></div>
+                <div class="main-section-img"></div>
+                <div class="main-section-content">
+                    <h3 class="main-section-content__title">ИССЛЕДУЙТЕ НОВЫЙ КОНТЕНТ</h3>
                     <p>Исследуйте новые технологии, которые<br>
                     позволят вам создавать новые сплавы,<br>
                         оружие, броню; социальные исследования<br>
@@ -98,27 +96,26 @@
                 </div>
               </div>
             </div>
-            <div  class="read-more">
-            <button >ПОДРОБНЕЕ</button>
-            <div class="line"></div>
-           <div class="volume"></div>
+            <div  class="second-section-button">
+            <button class="second-section-button__button button_size_b">ПОДРОБНЕЕ</button>
+           <div class="second-section-button__shade shade"></div>
             </div>
             <div class="pozfon2"></div>
             <div class="pozfon3"></div>
         </section>
-        <section>
-            <div class="wrapper1">
-                <div class="block-text">
-                <div class="title"><span>КАК НАЧАТЬ ИГРАТЬ</span></div><br>
-                <p>1. Запустите Minecraft JAVA EDITION версии 1.16.5</p><br>
-                <p>2. Перейдите во вкладку сетевой игры.</p><br>
-                <p>3. Подключитесь по IP адресу <a href=""> Play.ConcordiaCrtaft.org </a></p><br>
-                <p>4. Посетите наше discord сообщество  <a href="discord.qq/D7Jdwxx7">discord.qq/D7Jdwxx7</a></p><br>
+        <section class="third-section">
+            <div class="third-section__wrapper">
+                <div class="third-section-block">
+                <div class="third-section-block__title"><span>КАК НАЧАТЬ ИГРАТЬ</span></div><br>
+                <p class="third-section-block__text">1. Запустите Minecraft JAVA EDITION версии 1.16.5</p><br>
+                <p class="third-section-block__text">2. Перейдите во вкладку сетевой игры.</p><br>
+                <p class="third-section-block__text">3. Подключитесь по IP адресу <a class="third-section-block__link" href=""> Play.ConcordiaCrtaft.org </a></p><br>
+                <p class="third-section-block__text">4. Посетите наше discord сообщество  <a class="third-section-block__link" href="discord.qq/D7Jdwxx7">discord.qq/D7Jdwxx7</a></p>
                 </div>
             </div>
         </section>
         <section>
-            <div class="title double"><span>НОВОСТИ</span></div> 
+            <div class="title double"><span>НОВОСТИ</span></div>
             <div class="wrapper">
             <div class="grid2">
                 <div class="grid-column">

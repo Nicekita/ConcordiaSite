@@ -9,66 +9,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style-news.css') }}">
 </head>
-<body>
+<body class="page-news">
 {{ include('main/header.html.twig') }}
-
-    <div class="wrapper">
-        <div class="grid">
-            <div class="grid-column">
-            <div class="grey"></div>
-                   <div class="title-news"><h2>{{newsarray[0].header}}</h2> {# вот так примерно работают массивы и даты, надо заменить конечно все это на цикл #}
-                         <p>{{newsarray[0].text}}</p>
-                         <p>{{newsarray[0].date|date("d.m.Y")}}</p>
+     <div class ="page-news">
+    <div class="page-news__wrapper">
+        <div class="page-news__main">
+            <div class="page-news__grid-column">
+                   <div class="item-news">
+                       <div class="item-news__img"></div>
+                       <h2 class="item-news__title">{{newsarray[0].header}}</h2> {# вот так примерно работают массивы и даты, надо заменить конечно все это на цикл #}
+                         <p class="item-news__text">{{newsarray[0].text}}</p>
+                         <p class="item-news__date">{{newsarray[0].date|date("d.m.Y")}}</p>
                    </div>
             </div>
             {% for news in newsarray %}
             {{ include('newsblock.html.twig') }}
             {% endfor %}
-            <div class="grid-column">
-                <div class="grey"></div>
-                       <div class="title-news"><h2>ПРЕДРЕЛИЗ ПРОЕКТА 0.4.3</h2>
-                             <p>Мы реализовали x,y,z Тут нужно добавить ещё какого-нибудь текста, чтоб он автоматически обрезался после трёхю</p>
-                             <p>20.03.2021</p>
+            <div class="page-news__grid-column">
+                       <div class="item-news">
+                           <div class="item-news__img"></div>
+                           <h2 class="item-news__title">ПРЕДРЕЛИЗ ПРОЕКТА 0.4.3</h2>
+                             <p class="item-news__text">Мы реализовали x,y,z Тут нужно добавить ещё какого-нибудь текста, чтоб он автоматически обрезался после трёхю</p>
+                             <p class="item-news__date">20.03.2021</p>
                        </div>
                 </div>
-                <div class="grid-column">
-                    <div class="grey"></div>
-                           <div class="title-news"><h2>ПРЕДРЕЛИЗ ПРОЕКТА 0.4.3</h2>
-                                 <p>Мы реализовали x,y,z Тут нужно добавить ещё какого-нибудь текста, чтоб он автоматически обрезался после трёх..ю</p>
-                                 <p>20.03.2021</p>
-                           </div>
-                    </div>
-                    <div class="grid-column">
-                        <div class="grey"></div>
-                               <div class="title-news"><h2>ПРЕДРЕЛИЗ ПРОЕКТА 0.4.3</h2>
-                                     <p>Мы реализовали x,y,z Тут нужно добавить ещё какого-нибудь текста, чтоб он автоматически обрезался после трёх..ю</p>
-                                     <p>20.03.2021</p>
-                               </div>
-                        </div>
-                        <div class="grid-column">
-                            <div class="grey"></div>
-                                   <div class="title-news"><h2>ПРЕДРЕЛИЗ ПРОЕКТА 0.4.3</h2>
-                                         <p>Мы реализовали x,y,z Тут нужно добавить ещё какого-нибудь текста, чтоб он автоматически обрезался после трёх..ю</p>
-                                         <p>20.03.2021</p>
-                                   </div>
-                            </div>
-                            <div class="grid-column">
-                                <div class="grey"></div>
-                                       <div class="title-news"><h2>ПРЕДРЕЛИЗ ПРОЕКТА 0.4.3</h2>
-                                             <p>Мы реализовали x,y,z Тут нужно добавить ещё какого-нибудь текста, чтоб он автоматически обрезался после трёх..ю</p>
-                                             <p>20.03.2021</p>
-                                       </div>
-                                </div>
 
                               
                     
         </div>
-        <div class="page-number">
-            <div class="back"><button></button></div>
-            <div class="page"><H3>Cтраница 1 из ....</H3></div>
-            <div class="next"><button></button></div>
+        <div class="page-news-switch">
+                <button class="page-news-switch__back-button"></button>
+                <H3 class="page-news-switch__page">Cтраница 1 из ....</H3>
+                <button class="page-news-switch__next-button"></button>
         </div>
     </div>
+</div>
 {{ include('main/footer.html.twig') }}
 </body>
 </html>
