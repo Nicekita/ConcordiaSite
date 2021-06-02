@@ -8,8 +8,21 @@ addnews:
     path: /newseditor
     controller: App\Controller\NewsController::add
 newsadded:
-    path: /newsAdd
-    controller: App\Controller\NewsController::added
+    path: /api/news
+    controller: App\Controller\API\NewsAPI::news
 news:
-    path: /news
+    path: /news/{page}
     controller: App\Controller\NewsController::index
+    defaults:
+        page: 0
+    requirements:
+        page: '\d+'
+player:
+    path: /api/player
+    controller: App\Controller\API\PlayerAPI::players
+town:
+        path: /api/town
+        controller: App\Controller\API\TownAPI::towns
+realm:
+    path: /api/realm
+    controller: App\Controller\API\RealmAPI::realms

@@ -6,9 +6,16 @@ use App\Repository\RealmRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\UniqueConstraint;
 
 /**
  * @ORM\Entity(repositoryClass=RealmRepository::class)
+ * @ORM\Table(name="Realm",
+ *    uniqueConstraints={
+ *        @UniqueConstraint(name="RealmName_unique",
+ *            columns={"Name"})
+ *    }
+ * )
  */
 class Realm
 {
@@ -30,7 +37,7 @@ class Realm
     private $Owner;
 
     /**
-     * @ORM\OneToOne(targetEntity=town::class, cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=Town::class, cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $Capital;
@@ -39,6 +46,11 @@ class Realm
      * @ORM\OneToMany(targetEntity=Town::class, mappedBy="Realm")
      */
     private $townlist;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     */
+    private $cash;
 
     public function __construct()
     {
@@ -112,6 +124,18 @@ class Realm
                 $townlist->setRealm(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCash(): ?float
+    {
+        return $this->cash;
+    }
+
+    public function setCash(?float $cash): self
+    {
+        $this->cash = $cash;
 
         return $this;
     }

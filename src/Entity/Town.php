@@ -6,9 +6,16 @@ use App\Repository\TownRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\UniqueConstraint;
 
 /**
  * @ORM\Entity(repositoryClass=TownRepository::class)
+ * @ORM\Table(name="Town",
+ *    uniqueConstraints={
+ *        @UniqueConstraint(name="TownName_unique",
+ *            columns={"Name"})
+ *    }
+ * )
  */
 class Town
 {
@@ -30,7 +37,7 @@ class Town
     private $Name;
 
     /**
-     * @ORM\ManyToOne(targetEntity=realm::class, inversedBy="townlist")
+     * @ORM\ManyToOne(targetEntity=Realm::class, inversedBy="townlist")
      */
     private $Realm;
 
@@ -38,6 +45,11 @@ class Town
      * @ORM\OneToMany(targetEntity=Player::class, mappedBy="Town")
      */
     private $PlayerList;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $Cash;
 
     public function __construct()
     {
@@ -111,6 +123,18 @@ class Town
                 $playerList->setTown(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCash(): ?float
+    {
+        return $this->Cash;
+    }
+
+    public function setCash(float $Cash): self
+    {
+        $this->Cash = $Cash;
 
         return $this;
     }

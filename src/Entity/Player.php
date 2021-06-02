@@ -4,9 +4,15 @@ namespace App\Entity;
 
 use App\Repository\PlayerRepository;
 use Doctrine\ORM\Mapping as ORM;
-
+use Doctrine\ORM\Mapping\UniqueConstraint;
 /**
  * @ORM\Entity(repositoryClass=PlayerRepository::class)
+ * @ORM\Table(name="Player",
+ *    uniqueConstraints={
+ *        @UniqueConstraint(name="UUID_unique",
+ *            columns={"UUID"})
+ *    }
+ * )
  */
 class Player
 {
@@ -31,6 +37,11 @@ class Player
      * @ORM\ManyToOne(targetEntity=Town::class, inversedBy="PlayerList")
      */
     private $Town;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $Cash;
 
     public function getId(): ?int
     {
@@ -69,6 +80,18 @@ class Player
     public function setTown(?Town $Town): self
     {
         $this->Town = $Town;
+
+        return $this;
+    }
+
+    public function getCash(): ?float
+    {
+        return $this->Cash;
+    }
+
+    public function setCash(float $Cash): self
+    {
+        $this->Cash = $Cash;
 
         return $this;
     }

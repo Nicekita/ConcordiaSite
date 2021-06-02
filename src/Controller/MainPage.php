@@ -10,10 +10,9 @@ class MainPage extends AbstractController
 {
     public function index(): Response
     {
-        $playercounter = 22;
-
+        $playerCounter = 22;
         return $this->render('index.html.twig', [
-            'playercount' => $playercounter,
+            'playercount' => $playerCounter,
         ]);
     }
 }

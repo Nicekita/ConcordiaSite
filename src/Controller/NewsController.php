@@ -16,32 +16,20 @@ class NewsController extends AbstractController
             'param' => $param,
             ]);
     }
-    public function index(): Response
+    public function index(int $page):Response
     {
-        $repository = $this->getDoctrine()->getRepository(News::class); //todo change findall to specific page finder
-        $newsarray = $repository->findAll();
+        $newsInPage=6;
+        $repository = $this->getDoctrine()->getRepository(News::class);
+        $allNews = $repository->findAll();
+        $newsArray=array();
+        for($i=0;$i<$newsInPage&&($page*$newsInPage)+$i<sizeof($allNews);$i++){
+            $newsArray[$i]=$allNews[($page*$newsInPage)+$i];
+        }
         return $this->render('news.html.twig', [
-            'newsarray' => $newsarray,
+            'newsarray' => $newsArray,
         ]);
     }
 
-    function added():Response{
 
-        $request =  Request::createFromGlobals();
-
-        $Author = $request->request->get('Author');
-        $Date = $request->request->get('Date');
-        $Header = $request->request->get('Header');
-        $Text = $request->request->get('Text');
-        $entityManager = $this->getDoctrine()->getManager();
-        $news = new News();
-        $news->setAuthor($Author);
-        $news->setDate(new \DateTime());
-        $news->setHeader($Header);
-        $news->setText($Text);
-        $entityManager->persist($news);
-        $entityManager->flush();
-        return new Response("Вы успешно сохранили новость с ID= ".$news->getId());
-    }
 }
 
