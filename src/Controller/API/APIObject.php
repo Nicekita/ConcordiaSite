@@ -4,14 +4,52 @@
 namespace App\Controller\API;
 
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-interface APIObject
+abstract class APIObject extends AbstractController
 {
-    function addObject(Request $request):array;
-    function removeObject(Request $request):array;
-    function updateObject(Request $request):array;
-    function getObject(Request $request):array;
+    function init():Response{
+        $request = Request::createFromGlobals();
+        $response = new JsonResponse();
+        //get gets through
+        if($request->getMethod()=='GET'){
+            $response->setData($this->getObject($request));
+            return $response;
+        }
+        //for everything else, we look for apikey
+        if($request->headers->get('apiKey')!=$this->getParameter('app.apikey')){
+            $response->setData([
+                'status'=>400,
+                'error'=>'You have no permission to use this API'
+            ]);
+            return $response;
+        }
 
-
+        switch ($request->getMethod()) {
+            case 'POST':
+                $data = $this->addObject($request);
+                break;
+            case 'PUT':
+                $data = $this->updateObject($request);
+                break;
+            case 'DELETE':
+                $data = $this->removeObject($request);
+                break;
+            default:
+                $data = [
+                'status'=>400,
+                'error'=>'method does not exist'
+                ];
+                break;
+        }
+        $response->setData($data);
+        return $response;
+    }
+    abstract function addObject(Request $request):array;
+    abstract function removeObject(Request $request):array;
+    abstract function updateObject(Request $request):array;
+    abstract function getObject(Request $request):array;
 }

@@ -11,17 +11,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
-class TownAPI extends AbstractController implements APIObject
+class TownAPI extends APIObject
 {
-    public function towns():Response{
-        $request = Request::createFromGlobals();
-        return MethodHandler::selectMethodByRequest($request, $this);
-    }
+
     function addObject(Request $request):array{
-        $Owner = $request->request->get('Owner');
-        $Name = $request->request->get('Name');
-        $Realm = $request->request->get('Realm');
-        $Cash = $request->request->get('Cash');
+        $data = json_decode($request->getContent(), true);
+        $Name = $data('Name')??null;
+        $Owner =$data('Owner')??null;
+        $Realm =$data['Realm']??null;
+        $Cash = $data('Cash')??null;
         if($Cash==null) $Cash=0;
         if ($Owner==null||$Name==null){
             return [
@@ -101,10 +99,11 @@ class TownAPI extends AbstractController implements APIObject
         ];
     }
     function updateObject(Request $request):array{
-        $Name = $request->request->get('Name');
-        $Owner = $request->request->get('Owner');
-        $Realm = $request->request->get('Realm');
-        $Cash = $request->request->get('Cash');
+        $data = json_decode($request->getContent(), true);
+        $Name = $data('Name')??null;
+        $Owner =$data('Owner')??null;
+        $Realm =$data['Realm']??null;
+        $Cash = $data('Cash')??null;
         if ($Name==null){
             return [
                 'status' => 400,
@@ -118,7 +117,7 @@ class TownAPI extends AbstractController implements APIObject
             'error' => "Town not found",
         ];
         if($Owner!=null) $updatedTown->setOwner($Owner);
-        if($Realm='null'){
+        if($Realm=='null'){
             $updatedTown->setRealm(null);
         } else
         if($Realm!=null) {

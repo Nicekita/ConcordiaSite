@@ -19,10 +19,10 @@ news:
         page: '\d+'
 player:
     path: /api/player
-    controller: App\Controller\API\PlayerAPI::players
+    controller: App\Controller\API\PlayerAPI::init
 town:
         path: /api/town
-        controller: App\Controller\API\TownAPI::towns
+        controller: App\Controller\API\TownAPI::init
 realm:
     path: /api/realm
-    controller: App\Controller\API\RealmAPI::realms
+    controller: App\Controller\API\RealmAPI::init

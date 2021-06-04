@@ -10,17 +10,15 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 
-class RealmAPI extends AbstractController implements APIObject
+class RealmAPI extends APIObject
 {
-    public function realms():Response{
-        $request = Request::createFromGlobals();
-        return MethodHandler::selectMethodByRequest($request, $this);
-    }
+
     function addObject(Request $request):array{
-        $Owner = $request->request->get('Owner');
-        $Name = $request->request->get('Name');
-        $Capital = $request->request->get('Capital');
-        $Cash = $request->request->get('Cash');
+        $data = json_decode($request->getContent(), true);
+        $Owner = $data['Owner']??null;
+        $Name = $data['Name']??null;
+        $Capital = $data['Capital']??null;
+        $Cash = $data['Cash']??null;
         if($Cash==null) $Cash=0;
         if ($Owner==null||$Name==null){
             return [
@@ -39,16 +37,20 @@ class RealmAPI extends AbstractController implements APIObject
         $newRealm->setName($Name);
         $newRealm->setOwner($Owner);
         $newRealm->setCash($Cash);
-        if($Capital!=null) {
-            $repository = $this->getDoctrine()->getRepository(Town::class);
-            $capitalToFind = $repository->findOneBy(['Name'=>$Capital]);
-            if($capitalToFind!=null)
-                $newRealm->setCapital($capitalToFind);
-            else return [
+        if($Capital==null) {
+            return [
                 'status'=>404,
-                'error'=>'Capital not found'
+                'error'=>'No Capital value'
             ];
         }
+        $repository = $this->getDoctrine()->getRepository(Town::class);
+        $capitalToFind = $repository->findOneBy(['Name'=>$Capital]);
+        if($capitalToFind!=null)
+            $newRealm->setCapital($capitalToFind);
+        else return [
+            'status'=>404,
+            'error'=>'Capital not found'
+        ];
         $entityManager->persist($newRealm);
         $entityManager->flush();
         return [
@@ -99,10 +101,11 @@ class RealmAPI extends AbstractController implements APIObject
         ];
     }
     function updateObject(Request $request):array{
-        $Name = $request->request->get('Name');
-        $Owner = $request->request->get('Owner');
-        $Capital = $request->request->get('Capital');
-        $Cash = $request->request->get('Cash');
+        $data = json_decode($request->getContent(), true);
+        $Owner = $data['Owner']??null;
+        $Name = $data['Name']??null;
+        $Capital = $data['Capital']??null;
+        $Cash = $data['Cash']??null;
         if ($Name==null){
             return [
                 'status' => 400,
@@ -117,16 +120,20 @@ class RealmAPI extends AbstractController implements APIObject
         ];
         if($Owner!=null) $updatedRealm->setOwner($Owner);
         if($Cash!=null) $updatedRealm->setCash($Cash);
-        if($Capital!=null) {
-            $repository = $this->getDoctrine()->getRepository(Town::class);
-            $townToFind = $repository->findOneBy(['Name'=>$Capital]);
-            if($townToFind!=null)
-                $updatedRealm->setCapital($townToFind);
-            else return [
+        if($Capital==null) {
+            return [
                 'status'=>404,
-                'error'=>'Capital not found'
+                'error'=>'No Capital value'
             ];
         }
+        $repository = $this->getDoctrine()->getRepository(Town::class);
+        $capitalToFind = $repository->findOneBy(['Name'=>$Capital]);
+        if($capitalToFind!=null)
+            $updatedRealm->setCapital($capitalToFind);
+        else return [
+            'status'=>404,
+            'error'=>'Capital not found'
+        ];
         $entityManager->persist($updatedRealm);
         $entityManager->flush();
         return [

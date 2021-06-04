@@ -6,23 +6,22 @@ use App\Entity\News;
 use App\Entity\Player;
 use App\Entity\Town;
 use App\Service\MethodHandler;
+use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
-class PlayerAPI extends AbstractController implements APIObject
+class PlayerAPI extends APIObject
 {
-        public function players():Response{
-            $request = Request::createFromGlobals();
-            return MethodHandler::selectMethodByRequest($request, $this);
-        }
+
         function addObject(Request $request):array{
-            $UUID = $request->request->get('UUID');
-            $Nickname = $request->request->get('Nickname');
-            $Town = $request->request->get('Town');
-            $Cash = $request->request->get('Cash');
-            if(is_null($Cash)) $Cash=0;
+
+            $data = json_decode($request->getContent(), true);
+            $UUID = $data['UUID'] ?? null;
+            $Nickname = $data['Nickname'] ?? null;
+            $Town = $data['Town'] ?? null;
+            $Cash = $data['Cash'] ?? 0;
             if ($UUID==null||$Nickname==null){
                 return [
                     'status' => 400,
@@ -94,10 +93,11 @@ class PlayerAPI extends AbstractController implements APIObject
 
         }
         function updateObject(Request $request):array{
-            $UUID = $request->request->get('UUID');
-            $Nickname = $request->request->get('Nickname');
-            $Town = $request->request->get('Town');
-            $Cash = $request->request->get('Cash');
+            $data = json_decode($request->getContent(), true);
+            $UUID = $data['UUID'] ?? null;
+            $Nickname = $data['Nickname'] ?? null;
+            $Town = $data['Town'] ?? null;
+            $Cash = $data['Cash'] ?? 0;
             if ($UUID==null){
                 return [
                     'status' => 400,
@@ -112,7 +112,7 @@ class PlayerAPI extends AbstractController implements APIObject
             ];
             if($Nickname!=null) $updatedPlayer->setNickName($Nickname);
             if($Cash!= null) $updatedPlayer->setCash($Cash);
-            if($Town='null'){
+            if($Town=='null'){
                 $updatedPlayer->setTown(null);
             } else
             if($Town!=null) {

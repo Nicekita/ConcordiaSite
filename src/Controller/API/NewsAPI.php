@@ -3,37 +3,41 @@
 
 namespace App\Controller\API;
 use App\Entity\News;
+use App\Service\FileUploader;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class NewsAPI extends AbstractController
 {
-    public function news(): Response {
+    public function news(FileUploader $fileUploader): Response {
         $request = Request::createFromGlobals();
         $response = new JsonResponse();
         if($request->isMethod('POST')) {
-            $response->setData($this->addNews($request));
+            $response->setData($this->addNews($request,$fileUploader));
         } else {
             $response->setData($this->getNews($request));
         }
         return $response;
     }
+
     function getNews(Request $request):array{
         return [
             'status' => 404,
             'success' => "There is no GET news requests. Try POST",
         ];
     }
-    function addNews(Request $request):array
+
+    function addNews(Request $request,FileUploader $fileUploader):array
     {
         if ($request->isMethod('POST')) {
             $Author = $request->request->get('Author');
             $Header = $request->request->get('Header');
             $Text = $request->request->get('Text');
-            $Image = $request->request->get('Image');
-            if ($Author==null||$Header==null||$Text==null||$Image==null){
+            $Image = $request->files->get('Image');
+            if ($Author==null||$Header==null||$Text==null){
                 return [
                     'status' => 400,
                     'success' => "Not enough parameters",
@@ -45,7 +49,7 @@ class NewsAPI extends AbstractController
             $news->setDate(new \DateTime());
             $news->setHeader($Header);
             $news->setText($Text);
-            $news->setImage($Image);
+            $news->setImage($fileUploader->upload($Image));
             $entityManager->persist($news);
             $entityManager->flush();
             return [
@@ -53,5 +57,9 @@ class NewsAPI extends AbstractController
                 'success' => "News Block added successfully",
             ];
         }
+        return [
+            'status' => 200,
+            'success' => "Wrong method used",
+        ];
     }
 }
