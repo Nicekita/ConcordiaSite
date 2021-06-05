@@ -1,6 +1,8 @@
 <div class="item-news">
-    <div class="item-news__img"></div>
-    <h2 class="item-news__title">{{newsarray[0].header}}</h2> {# вот так примерно работают массивы и даты, надо заменить конечно все это на цикл #}
-    <p class="item-news__text">{{newsarray[0].text}}</p>
-    <p class="item-news__date">{{newsarray[0].date|date("d.m.Y")}}</p>
+    <div class="item-news__img" >
+        <img src="{{ asset('news/img/'~news.image) }}">
+    </div>
+    <h2 class="item-news__title">{{news.header}}</h2> {# вот так примерно работают массивы и даты, надо заменить конечно все это на цикл #}
+    <p class="item-news__text">{{news.text}}</p>
+    <p class="item-news__date">{{news.date|date("d.m.Y")}}</p>
 </div>

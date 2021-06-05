@@ -126,7 +126,7 @@ class RealmAPI extends APIObject
                 'error'=>'No Capital value'
             ];
         }
-        $repository = $this->getDoctrine()->getRepository(Town::class);
+        $repository = $this->getDoctrine()->getRepository(chamTown::class);
         $capitalToFind = $repository->findOneBy(['Name'=>$Capital]);
         if($capitalToFind!=null)
             $updatedRealm->setCapital($capitalToFind);

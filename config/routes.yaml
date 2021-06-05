@@ -11,12 +11,8 @@ newsadded:
     path: /api/news
     controller: App\Controller\API\NewsAPI::news
 news:
-    path: /news/{page}
+    path: /news/{page<\d+>?1}
     controller: App\Controller\NewsController::index
-    defaults:
-        page: 0
-    requirements:
-        page: '\d+'
 player:
     path: /api/player
     controller: App\Controller\API\PlayerAPI::init

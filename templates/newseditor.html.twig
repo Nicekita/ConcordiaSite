@@ -3,7 +3,7 @@
 </head>
 
 <body>
-    <form name="form1" action="{{ path('newsadded') }}" method="post">
+    <form name="form1" action="{{ path('newsadded') }}" method="post" enctype="multipart/form-data">
         {{ param }}<br>
         <input type="text" name="Author"><br>
         Заголовок:<br>
@@ -11,7 +11,7 @@
         Текст<br>
         <input type="text" name="Text"><br>
         Дата<br>
-        <input type="file" name="Image"><br>
+        <input type="file" name="Image" id="Image"><br>
         <input type="submit">
     </form>
 </body>
