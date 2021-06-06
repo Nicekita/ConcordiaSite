@@ -113,7 +113,7 @@ background-attachment: fixed;
     top: -62%; /* Положение от верхнего края */
     position: absolute; /* Абсолютное позиционирование */
     width: 1600px; /* Ширина */ /* Поля */
-    height: 600px; /* Минимальная высота */
+    height: 650px; /* Минимальная высота */
     left: 0;
     right: 0; /* Нужно для выравнивания */
     margin: 0px auto 0;

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,8 +16,8 @@
 <main class="profile">
     <div class="profile__wrapper wrapper">
     <div class="profile-player">
-        <h1 class="profile-player__title"></h1>
-        <div class="profile-player__img"></div>
+        <h1 class="profile-player__title">NICKNAME</h1> <!-- Ник игрока, это мне через ajax -->
+        <div class="profile-player__img"></div> <!-- Скин игрока, это мне через ajax -->
     </div>
     <div class="profile-info">
         <div class="profile-info-navigation">
@@ -40,61 +40,38 @@
     </div>
         <div class="profile-info-main">
             <div class="profile-main-section">
-                <h4 class="profile-main-section__title"></h4>
-                <p class="profile-main-section__text"></p>
+                <h3 class="profile-main-section__title">Статус:</h3>
+                <p class="profile-main-section__text">Игрок</p> <!-- Переменная статуса -->
             </div>
             <div class="profile-main-section">
-                <h4 class="profile-main-section__title"></h4>
-                <p class="profile-main-section__text"></p>
+                <h3 class="profile-main-section__title">Личные земли:</h3>
+                <p class="profile-main-section__text">34 чанка</p> <!-- Переменная земель -->
             </div>
             <div class="profile-main-section">
-                <h4 class="profile-main-section__title"></h4>
-                <p class="profile-main-section__text"></p>
+                <h3 class="profile-main-section__title">Содержание земель:</h3>
+                <p class="profile-main-section__text">7 слитков золота</p> <!-- Переменная содержания земели игрока -->
             </div>
             <div class="profile-main-section">
-                <h4 class="profile-main-section__title"></h4>
-                <p class="profile-main-section__text"></p>
+                <h3 class="profile-main-section__title">Член города:</h3>
+                <p class="profile-main-section__text">Хайден-Миллерово</p> <!-- и.т.д -->
             </div>
             <div class="profile-main-section">
-                <h4 class="profile-main-section__title"></h4>
-                <p class="profile-main-section__text"></p>
+                <h3 class="profile-main-section__title">Статуст члена города:</h3>
+                <p class="profile-main-section__text">Оля</p> <!-- и.т.д -->
             </div>
             <div class="profile-main-section">
-                <h4 class="profile-main-section__title"></h4>
-                <p class="profile-main-section__text"></p>
+                <h3 class="profile-main-section__title">Член государства:</h3>
+                <p class="profile-main-section__text">Фан клуб Саши Кастомера</p> <!-- и.т.д -->
             </div>
             <div class="profile-main-section">
-                <h4 class="profile-main-section__title"></h4>
-                <p class="profile-main-section__text"></p>
+                <h3 class="profile-main-section__title">Статус члена государства:</h3>
+                <p class="profile-main-section__text">Разработчик игр на Unity</p> <!-- и.т.д -->
             </div>
-            <div class="profile-main-section">
-                <h4 class="profile-main-section__title"></h4>
-                <p class="profile-main-section__text"></p>
-            </div>
-        </div>>
+        </div>
     </div>
 </div>
 </main>
+{{ include('main/footer.html.twig') }}
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Webase.html.twiglcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
->>>>>>> origin/master
