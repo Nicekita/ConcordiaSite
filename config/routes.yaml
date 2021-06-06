@@ -22,3 +22,18 @@ town:
 realm:
     path: /api/realm
     controller: App\Controller\API\RealmAPI::init
+about:
+    path: /about
+    controller: App\Controller\SimpleController::about
+admin:
+    path: /admin
+    controller: App\Controller\SimpleController::admin
+help:
+    path: /help
+    controller: App\Controller\SimpleController::help
+ban:
+    path: /ban
+    controller: App\Controller\SimpleController::ban
+profile:
+    path: /profile
+    controller: App\Controller\SimpleController::profile
