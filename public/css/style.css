@@ -45,6 +45,7 @@ left-panel{
     font-size: 9px;
     text-align: center;
     margin-bottom: 6px;
+    margin: 0 3.7%;
 }
 
 .person-title {
@@ -60,11 +61,9 @@ left-panel{
     padding: 15px 40px;
     font-weight: 800;
     font-size: 16px;
-    border-bottom-color: white;
+    border-color: white;
     border-bottom-width: 1.5px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+
 }
 .left-panel-button__shade {
 
@@ -88,9 +87,17 @@ left-panel{
     margin-left: 62px;
 }
 
+.central-panel__img-first{
+max-width: 100%;
+}
+
 .central-panel__logo-second {
     align-self: center;
-    margin-left: 18px;  
+    margin-left: 18px;
+}
+
+.central-panel__img-second{
+max-width: 100%;
 }
 
 .central-panel-button__button {
@@ -117,9 +124,10 @@ left-panel{
 }
 
 
-.title{
+.right-panel__title{
     text-align: right;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+
 }
 
 .right-panel__players {
@@ -133,11 +141,13 @@ left-panel{
 
 
 .second-section__title {
-    text-align: center;
     margin-top: 180px;
+}
+
+.title{
+    text-align: center;
     font-size: 36px;
     font-weight: 700;
-
 }
 
 .second_section__main {
@@ -192,7 +202,7 @@ left-panel{
 
 .third-section__wrapper {
     max-width: 900px;
-    height: 420px;
+    max-height: 100%;
     background-color: #100C15;
     padding:1px 64px;
     margin-left: auto;
@@ -204,14 +214,14 @@ left-panel{
 .third-section-block{
     font-size: 24px;
     color: lightgrey;
-    padding: 0px 2px;
+    padding: 50px 0px;
 
 }
 
 .third-section-block__title{
     color: white;
-    margin-top: 64px;
     font-size: 36px;
+    text-align: center;
 }
 .third-section-block__text{
     padding: 2px;
@@ -222,54 +232,58 @@ left-panel{
     text-decoration: none;
 
 }
-.double {
+.fourth-section__title {
     margin-top: 330px;
+    margin-bottom: 100px;
 }
-.grid2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;   
-    grid-column-gap: 101px; 
-    margin-top: 69px;
+.fourth-section-column {
+    display: flex;
+    justify-content: space-between;
 }
-.grey2 {
+
+.fourth-section-block{
+    margin-bottom: 24px;
+    width: 28%;
+}
+.fourth-section-block__img-size-b {
     margin-top: 25px;
     background-color: lightgrey;
     height: 202px;
-    width: 358px;
-    margin-bottom: 24px;
 }
 
-.grey1 {
-    margin-top: 25px;
+
+.fourth-section-block__img-size-s {
+    margin-top:35px;
     background-color: lightgrey;
     height: 180px;
-    width: 320px;
-    margin-bottom: 24px;
-}
-
-.grid-column> span {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 64px;
 
 }
-.title-news>h2 {
-    font-size: 24px;
-    font-weight: 600;
+
+
+.fourth-section-block__title {
     margin-top: 16px;
     text-align: center;
 }
 
-.title-news>p {
+.fourth-section-block__data {
     margin-top: 16px;
     text-align: center;
-
 }
 
-
-.z {
-    margin-left: 29px;
+.fourth-section-button__button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 128px;
 }
+.fourth-section-button__shade{
+    padding: 3px  40px;
+    width: 384px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .pozfon1 {
     background-image: url(../img/pozfon1.svg);
