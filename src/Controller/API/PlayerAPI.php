@@ -5,10 +5,7 @@ namespace App\Controller\API;
 use App\Entity\News;
 use App\Entity\Player;
 use App\Entity\Town;
-use App\Service\MethodHandler;
-use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -92,6 +89,28 @@ class PlayerAPI extends APIObject
             return $response;
 
         }
+    function getObjectbyName(Request $request):Response{
+        $Name = $request->query->get('Name');
+        $repository = $this->getDoctrine()->getRepository(Player::class);
+        $requestedPlayer = $repository->findOneBy(['NickName'=>$Name]);
+        $jsresponse = new JsonResponse();
+        if ($requestedPlayer==null) {$jsresponse->setData( [
+            'status' => 400,
+            'error' => "Player with Name = ".$Name." not found.",
+        ]);
+            return $jsresponse;
+        }
+        $response = [
+            'status' => 200,
+            'UUID' =>$requestedPlayer->getUUID(),
+            'Nickname' =>$requestedPlayer->getNickName(),
+            'Cash'=>$requestedPlayer->getCash()
+        ];
+        if ($requestedPlayer->getTown()!=null) $response['Town']=$requestedPlayer->getTown()->getName();
+        $jsresponse->setData($response);
+        return $jsresponse;
+
+    }
         function updateObject(Request $request):array{
             $data = json_decode($request->getContent(), true);
             $UUID = $data['UUID'] ?? null;

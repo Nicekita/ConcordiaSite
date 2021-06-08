@@ -11,17 +11,25 @@ class NewsController extends AbstractController
 {
     public function add(): Response
     {
-        $param = 'author';
         return $this->render('newseditor.html.twig',[
-            'param' => $param,
             ]);
+    }
+    public function specific($newsID): Response
+    {
+        $repository = $this->getDoctrine()->getRepository(News::class);
+        $news=$repository->find($newsID);
+        return $this->render('specNews.html.twig',[
+            'news' => $news,
+        ]);
     }
     public function index(int $page):Response
     {
+
         $newsInPage=6;
         $repository = $this->getDoctrine()->getRepository(News::class);
         $allNews = $repository->findAll();
         $newsArray=array();
+        if($page*$newsInPage>=sizeof($allNews)) $page=0;
         for($i=0;$i<$newsInPage&&($page*$newsInPage)+$i<sizeof($allNews);$i++){
             $newsArray[$i]=$allNews[($page*$newsInPage)+$i];
         }

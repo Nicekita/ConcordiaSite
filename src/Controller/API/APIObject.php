@@ -4,6 +4,7 @@
 namespace App\Controller\API;
 
 
+use App\Service\FileUploader;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,7 +12,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 abstract class APIObject extends AbstractController
 {
-    function init():Response{
+    private $fileUploader;
+    protected function getFileUploader():FileUploader{
+        return $this->fileUploader;
+    }
+    function init(FileUploader $fileuploader):Response{
+        $this->fileUploader=$fileuploader;
         $request = Request::createFromGlobals();
         $response = new JsonResponse();
         //get gets through

@@ -11,14 +11,14 @@ newsadded:
     path: /api/news
     controller: App\Controller\API\NewsAPI::news
 news:
-    path: /news/{!page<\d+>?1}
+    path: /news/{page<\d+>?0}
     controller: App\Controller\NewsController::index
 player:
     path: /api/player
     controller: App\Controller\API\PlayerAPI::init
 town:
-        path: /api/town
-        controller: App\Controller\API\TownAPI::init
+    path: /api/town
+    controller: App\Controller\API\TownAPI::init
 realm:
     path: /api/realm
     controller: App\Controller\API\RealmAPI::init
@@ -35,5 +35,11 @@ ban:
     path: /ban
     controller: App\Controller\SimpleController::ban
 profile:
-    path: /profile
+    path: /profile/{userid?}
     controller: App\Controller\SimpleController::profile
+customitem:
+    path: /api/item
+    controller: App\Controller\API\CustomItemAPI::init
+playerbyname:
+    path: /api/playerbyname
+    controller: App\Controller\API\PlayerAPI::getObjectbyName

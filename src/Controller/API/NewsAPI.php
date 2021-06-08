@@ -16,6 +16,13 @@ class NewsAPI extends AbstractController
         $request = Request::createFromGlobals();
         $response = new JsonResponse();
         if($request->isMethod('POST')) {
+            if($request->headers->get('apiKey')!=$this->getParameter('app.apikey')){
+                $response->setData([
+                    'status'=>400,
+                    'error'=>'You have no permission to use this API'
+                ]);
+                return $response;
+            }
             $response->setData($this->addNews($request,$fileUploader));
         } else {
             $response->setData($this->getNews($request));
@@ -49,7 +56,7 @@ class NewsAPI extends AbstractController
             $news->setDate(new \DateTime());
             $news->setHeader($Header);
             $news->setText($Text);
-            $news->setImage($fileUploader->upload($Image));
+            $news->setImage($fileUploader->upload($Image,'../public/img/news'));
             $entityManager->persist($news);
             $entityManager->flush();
             return [
