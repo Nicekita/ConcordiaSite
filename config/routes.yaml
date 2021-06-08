@@ -11,7 +11,7 @@ newsadded:
     path: /api/news
     controller: App\Controller\API\NewsAPI::news
 news:
-    path: /news/{page<\d+>?1}
+    path: /news/{!page<\d+>?1}
     controller: App\Controller\NewsController::index
 player:
     path: /api/player

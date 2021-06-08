@@ -16,10 +16,10 @@ class TownAPI extends APIObject
 
     function addObject(Request $request):array{
         $data = json_decode($request->getContent(), true);
-        $Name = $data('Name')??null;
-        $Owner =$data('Owner')??null;
+        $Name = $data['Name']??null;
+        $Owner =$data['Owner']??null;
         $Realm =$data['Realm']??null;
-        $Cash = $data('Cash')??null;
+        $Cash = $data['Cash']??null;
         if($Cash==null) $Cash=0;
         if ($Owner==null||$Name==null){
             return [
@@ -100,10 +100,10 @@ class TownAPI extends APIObject
     }
     function updateObject(Request $request):array{
         $data = json_decode($request->getContent(), true);
-        $Name = $data('Name')??null;
-        $Owner =$data('Owner')??null;
+        $Name = $data['Name']??null;
+        $Owner =$data['Owner']??null;
         $Realm =$data['Realm']??null;
-        $Cash = $data('Cash')??null;
+        $Cash = $data['Cash']??null;
         if ($Name==null){
             return [
                 'status' => 400,
