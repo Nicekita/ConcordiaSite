@@ -2,7 +2,6 @@
 
 
 namespace App\Controller\API;
-use App\Entity\News;
 use App\Entity\Player;
 use App\Entity\Town;
 use Symfony\Component\HttpFoundation\Response;
