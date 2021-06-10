@@ -69,9 +69,21 @@ class CustomItemAPI extends APIObject
 
     function getObject(Request $request): array
     {
+        $name = $request->query->get('Name');
+        $repository = $this->getDoctrine()->getRepository(CustomItem::class);
+        $requestedItem = $repository->findOneBy(['Name'=>$name]);
+        if ($requestedItem!=null) {
+            return[
+                'status' => 200,
+                'Name' => $requestedItem->getName(),
+                'Description' => $requestedItem->getDescription(),
+                'itemImageUrl' => $requestedItem->getItemImage(),
+                'craftImageUrl' => $requestedItem->getCraftImage(),
+            ];
+        }
         return[
-            'status'=>400,
-            'error' => 'WrongMethod'
+            'status'=>404,
+            'error' => 'Item not found'
         ];
         // TODO: Implement getObject() method.
     }

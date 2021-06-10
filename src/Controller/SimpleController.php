@@ -44,10 +44,14 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
         if($userid==null) $error=true;
         $repository = $this->getDoctrine()->getRepository(Player::class);
         $requestedPlayer = $repository->findOneBy(['UUID'=>$userid]);
-        return $this->render('profile.html.twig',[
+        $data = [
             'error'=>$error,
-            'playerTown'=>$requestedPlayer->getTown()->getName(),
             'Nick'=>$requestedPlayer->getNickName(),
-        ]);
+            'Cash'=>$requestedPlayer->getCash()
+        ];
+        if($requestedPlayer->getTown()!=null){
+            $data['Town']=$requestedPlayer->getTown()->getName();
+        }
+        return $this->render('profile.html.twig',$data);
     }
 }
