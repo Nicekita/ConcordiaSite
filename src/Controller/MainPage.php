@@ -17,7 +17,10 @@ class MainPage extends AbstractController
         $allNews = $repository->findAll();
         $newsArray=array();
         $nonews=false;
-        if($newsInPage>sizeof($newsArray)) $nonews=true;
+        if($newsInPage>sizeof($newsArray)) {$nonews=true;
+        return $this->render('index.html.twig', [
+            'nonews' => $nonews
+        ]);}
         for($i=0;$i<$newsInPage;$i++){
             $newsArray[$i]=$allNews[$i];
         }
