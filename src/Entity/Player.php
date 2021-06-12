@@ -35,6 +35,7 @@ class Player
 
     /**
      * @ORM\ManyToOne(targetEntity=Town::class, inversedBy="PlayerList")
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $Town;
 

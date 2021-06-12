@@ -44,6 +44,7 @@ class Realm
 
     /**
      * @ORM\OneToMany(targetEntity=Town::class, mappedBy="Realm")
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $townlist;
 
