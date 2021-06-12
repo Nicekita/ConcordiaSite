@@ -19,7 +19,8 @@ class MainPage extends AbstractController
         $nonews=false;
         if($newsInPage>sizeof($newsArray)) {$nonews=true;
         return $this->render('index.html.twig', [
-            'nonews' => $nonews
+            'nonews' => $nonews,
+            'playercount' => $playerCounter
         ]);}
         for($i=0;$i<$newsInPage;$i++){
             $newsArray[$i]=$allNews[$i];
