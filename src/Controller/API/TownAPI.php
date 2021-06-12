@@ -5,7 +5,6 @@ namespace App\Controller\API;
 use App\Entity\Player;
 use App\Entity\Realm;
 use App\Entity\Town;
-use App\Service\MethodHandler;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
