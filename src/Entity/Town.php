@@ -37,7 +37,8 @@ class Town
     private $Name;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Realm::class, inversedBy="townlist")
+     * @ORM\ManyToOne(targetEntity=Realm::class, inversedBy="townlist" )
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $Realm;
 
