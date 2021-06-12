@@ -34,7 +34,7 @@ class Player
     private $NickName;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Town::class, inversedBy="PlayerList" orphanRemoval=false)
+     * @ORM\ManyToOne(targetEntity=Town::class, inversedBy="PlayerList")
      */
     private $Town;
 
