@@ -14,14 +14,6 @@
      <div class ="page-news">
     <div class="page-news__wrapper">
         <div class="page-news__main">
-            <div class="page-news__grid-column">
-                   <div class="item-news">
-                       <div class="item-news__img"></div>
-                       <h2 class="item-news__title">{{newsarray[0].header}}</h2> {# вот так примерно работают массивы и даты, надо заменить конечно все это на цикл #}
-                         <p class="item-news__text">{{newsarray[0].text}}</p>
-                         <p class="item-news__date">{{newsarray[0].date|date("d.m.Y")}}</p>
-                   </div>
-            </div>
             {% for news in newsarray %}
             {{ include('newsblock.html.twig') }}
             {% endfor %}

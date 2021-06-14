@@ -50,7 +50,7 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
             'Cash'=>$requestedPlayer->getCash()
         ];
         if($requestedPlayer->getTown()!=null){
-            $data['Town']=$requestedPlayer->getTown()->getName();
+            $data['Town']=$requestedPlayer->getTown();
         }
         return $this->render('profile.html.twig',$data);
     }
