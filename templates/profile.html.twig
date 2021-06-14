@@ -16,29 +16,22 @@
 <main class="profile">
     <div class="profile__wrapper wrapper">
     <div class="profile-player">
-        <h1 class="profile-player__title">NICKNAME</h1> <!-- Ник игрока, это мне через ajax -->
+        <h1 class="profile-player__title">{{ Nick }}</h1> <!-- Ник игрока, это мне через ajax -->
         <div class="profile-player__img"></div> <!-- Скин игрока, это мне через ajax -->
     </div>
     <div class="profile-info">
         <div class="profile-info-navigation">
             <div  class="profile-info-button">
-                <button class="profile-info-button__button button_size_b">ПЕРСОНАЛЬНОЕ</button>
+                <button class="profile-info-button__person profile-info-button_color_darker">ПЕРСОНАЛЬНОЕ</button>
                 <div class="profile-info-button__shade shade"></div>
             </div>
             <div  class="profile-info-button">
-                <button class="profile-info-button__button button_size_b">ГОРОД</button>
+                <button class="profile-info-button__city ">ГОРОД</button>
                 <div class="profile-info-button__shade shade"></div>
             </div>
-            <div  class="profile-info-button">
-                <button class="profile-info-button__button button_size_b">ДЕРЖАВА</button>
-                <div class="profile-info-button__shade shade"></div>
-            </div>
-            <div  class="profile-info-button">
-                <button class="profile-info-button__button button_size_b">ФРАКЦИЯ</button>
-                <div class="profile-info-button__shade shade"></div>
-            </div>
+
     </div>
-        <div class="profile-info-main">
+        <div class="profile-info-main-person">
             <div class="profile-main-section">
                 <h3 class="profile-main-section__title">Статус:</h3>
                 <p class="profile-main-section__text">Игрок</p> <!-- Переменная статуса -->
@@ -66,6 +59,24 @@
             <div class="profile-main-section">
                 <h3 class="profile-main-section__title">Статус члена государства:</h3>
                 <p class="profile-main-section__text">Разработчик игр на Unity</p> <!-- и.т.д -->
+            </div>
+        </div>
+        <div class="profile-info-main-city profile-info-main_theme_hidden">
+            <div class="profile-main-section">
+                <h3 class="profile-main-section__title">Мер города:</h3>
+                <p class="profile-main-section__text">Кто-то</p> <!-- Переменная статуса -->
+            </div>
+            <div class="profile-main-section">
+                <h3 class="profile-main-section__title">Название города:</h3>
+                <p class="profile-main-section__text">Хайден-Донское</p> <!-- Переменная земель -->
+            </div>
+            <div class="profile-main-section">
+                <h3 class="profile-main-section__title">Родной тип биома города:</h3>
+                <p class="profile-main-section__text">Болото</p> <!-- Переменная содержания земели игрока -->
+            </div>
+            <div class="profile-main-section">
+                <h3 class="profile-main-section__title">Городской бюджет:</h3>
+                <p class="profile-main-section__text">0 слитков золота</p> <!-- и.т.д -->
             </div>
         </div>
     </div>

@@ -1,17 +1,50 @@
 <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-<header>
-    <div class="wrapper">
-        <nav>
-            <ul class="nav">
-                <li><a href="{{ path('news',{'page':0}) }}">НОВОСТИ</a></li>
-                <li><a href="">КАРТА</a></li>
-                <li><a href="">МАГАЗИН</a></li>
-                <li>
-                    <select>
-                        <option>ПОМОЩЬ</option>
-                    </select>
+<link rel="stylesheet" href="{{ asset('css/profile-modal.css') }}">
+<script src="{{ asset('js/modal-profile.js') }}"></script>
+<header class="page-header">
+    <div class="header__wrapper">
+        <nav class="header-panel">
+            <div class="header-img">
+                <img class="header-img__Vk" src="img/Vk.png" width="35px" height="31px">
+                <img class="header-img__Discord" src="img/Discord.png" width="35x" height="31px">
+            </div>
+            <div class="header-logo hidden-logo">
+            <img src="img/logotype.png" class="logotype ">
+            </div>
+            <ul class="navigation">
+                <li class="navigation__item"><a class="navigation__link" href="{{ path('news',{'page':0}) }}">НОВОСТИ</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="">КАРТА</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="">МАГАЗИН</a></li>
+                <li class="navigation__item">
+                    <div class="dropdown">
+                        <p class="dropdown__title">ПОМОЩЬ <i class="dropdown_span">&lsaquo;</i></p>
+                        <div class="dropdown-content">
+                            <a class="dropdown-content__link" href="#">РУКОВОДСТО</a>
+                            <a class="dropdown-content__link" href="#">АДМИН-ЛИСТ</a>
+                            <a class="dropdown-content__link" href="#">БАН-ЛСИТ</a>
+                        </div>
+                    </div>
                 </li>
             </ul>
+            <div class="profile-button">
+               <button class="profile-button__button open_modal">ПРОФИЛЬ</button>
+                <div class="profile-button__shade"></div>
+            </div>
         </nav>
     </div>
+    <div id="modal" class="modal">
+    <div id="close_modal">+</div>
+    <form action="index.html.twig" class="profile-form">
+        <h1 class="profile-form__title">ПРОФИЛЬ</h1>
+        <div class="profile-window">
+            <input type="text" class="profile-window__text" placeholder="Введите имя игроа">
+        </div>
+        <div class="profile-form-center">
+        <input id="btn-ajax" type="button" class="profile-form__button" value="НАЙТИ" >
+        <div class="profile-form__shadow"></div>
+        </div>
+        <p class="error">Данный игрок не найден</p>
+    </form>
+    </div>
 </header>
+

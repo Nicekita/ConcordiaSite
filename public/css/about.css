@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    background-color: #100C15;
+}
+
+.about__wrapper{
+    margin-top: 100px;
+    margin-bottom: 390px;
+}
+
+.wrapper{
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.about-description__title{
+    margin-bottom: 15px;
+}
+
+.title-about{
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.about-features__title{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.about-description__text{
+    padding: 15px 15px;
+    font-size: 20px;
+}
+
+.about-features__item{
+    font-size: 19px;
+    padding: 5px 15px;
+    list-style-type: none;
+
+}

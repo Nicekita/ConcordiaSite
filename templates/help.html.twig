@@ -1,19 +1,64 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Webase.html.twiglcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Help</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/help.css') }}">
+</head>
+<body class="help">
+{{ include('main/header.html.twig') }}
+<main class="help">
+    <div class="help__wrapper wrapper">
+        <div class="help-title">
+            <h1 class="help-title__title">РУКОВОДСТВО ПО ПРЕДМЕТАМ</h1>
+        </div>
+        <div class="help__table">
+            <div class="help__row">
+                <div class="help-column">
+                    <img class="help-column__img" src="img/item.png">
+                    <h4 class="help-column__title">Личико Реи</h4>
+                    <p class="help-column__description"> Описание: Это Артефакт, который даёт уникальльную способность Артёму Теорентеру спидранить айтемы для игровоко сервера</p>
+                </div>
+                <div class="help-column">
+                    <img class="help-column__img" src="img/item.png">
+                    <h4 class="help-column__title">Личико Реи</h4>
+                    <p class="help-column__description"> Описание: Это Артефакт, который даёт уникальльную способность Артёму Теорентеру спидранить айтемы для игровоко сервера</p>
+                </div>
+                <div class="help-column">
+                    <img class="help-column__img" src="img/item.png">
+                    <h4 class="help-column__title">Личико Реи</h4>
+                    <p class="help-column__description"> Описание: Это Артефакт, который даёт уникальльную способность Артёму Теорентеру спидранить айтемы для игровоко сервера</p>
+                </div>
+            </div>
+            <div class="help__row">
+                <div class="help-column">
+                    <img class="help-column__img" src="img/item.png">
+                    <h4 class="help-column__title">Личико Астольфо</h4>
+                    <p class="help-column__description"> Описание: Это Артефакт, возбуждает главного админа сервера</p>
+                </div>
+                <div class="help-column">
+                    <img class="help-column__img" src="img/item.png">
+                    <h4 class="help-column__title">Личико Реи</h4>
+                    <p class="help-column__description"> Описание: Это Артефакт, который даёт уникальльную способность Артёму Теорентеру спидранить айтемы для игровоко сервера</p>
+                </div>
+            </div>
+            <div class="help__row">
+                <div class="help-column">
+                    <img class="help-column__img" src="img/item.png">
+                    <h4 class="help-column__title">Личико Реи</h4>
+                    <p class="help-column__description"> Описание: Это Артефакт, который даёт уникальльную способность Артёму Теорентеру спидранить айтемы для игровоко сервера</p>
+                </div>
+            </div>
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+        </div>
+    </div>
+
+</main>
+{{ include('main/footer.html.twig') }}
+</body>
 </html>

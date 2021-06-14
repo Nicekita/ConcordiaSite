@@ -61,7 +61,7 @@
     width: 100%;
 }
 
-.profile-info-button__button{
+.profile-info-button__person{
     color:#95408C;
     background-color: #FDAEE0;
     padding: 8px 24px;
@@ -69,15 +69,40 @@
     font-size: 16px;
     border-color: white;
     border-width: 2px;
+    width: 100%;
 }
+
+.profile-info-button__city{
+    color:#95408C;
+    background-color: #FDAEE0;
+    padding: 8px 24px;
+    font-weight: 800;
+    font-size: 16px;
+    border-color: white;
+    border-width: 2px;
+    width: 100%;
+}
+
+.profile-info-button_color_darker{
+    background: rgb(255, 133, 185);
+}
+
 .profile-info-button__shade{
     width: 100%;
     background-color: #CE7DBB;
     padding: 2px  40px;
 }
 
-.profile-info-main{
+.profile-info-main-city{
     margin-top: 10px;
+}
+
+.profile-info-main-person{
+    margin-top: 10px;
+}
+
+.profile-info-main_theme_hidden{
+    display: none;
 }
 
 .profile-main-section{

@@ -1,19 +1,46 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Webase.html.twiglcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
-
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+</head>
+<body class="about">
+{{ include('main/header.html.twig') }}
+<main class="about">
+    <div class="about__wrapper wrapper">
+        <div class="about-description">
+            <h2 class="about-description__title title-about">О ПРОЕКТЕ</h2>
+            <p class="about-description__text"> Внимание, сейчас будет латынь
+                ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat
+                volutpat. Ut wisis enim ad minim veniam, quis nostrud
+                exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                consequat.
+                ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat
+                volutpat. Ut wisis enim ad minim veniam, quis nostrud
+                exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                consequat.
+                </p>
+            </p>
+        </div>
+        <div class="about-features"></div>
+        <h2 class="about-features__title title-about">ОСОБЕННОСТИ ПРОЕКТА</h2>
+        <ul class="about-features__select">
+            <li class="about-features__item">Ну сервер маинкфрафта</li>
+            <li class="about-features__item">На нём играет Оля</li>
+            <li class="about-features__item">Очень классный сервер</li>
+            <li class="about-features__item">Просто топ</li>
+            <li class="about-features__item">Помогите</li>
+        </ul>
+    </div>
+</main>
+{{ include('main/footer.html.twig') }}
+</body>
 </html>

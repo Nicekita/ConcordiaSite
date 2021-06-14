@@ -12,10 +12,12 @@ color:#FFFFFF;
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
+    position: relative;
 
 }
 
 .first-section__wrapper {
+    width: 100%;
 }
 
 .wrapper{
@@ -24,20 +26,22 @@ background-attachment: fixed;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    width: 100% ;
 }
 
 .first-section__panel {
     display: flex;
     justify-content: space-between;
     align-items:flex-end ;
+    width: 100%;
 }
 
-left-panel{
-    margin-bottom: 190px;
+.left-panel{
+    width: 21%;
 }
 
 .left-panel__title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .person {
@@ -58,11 +62,11 @@ left-panel{
 .button_size_s{
     color:#95408C;
     background-color: #FDAEE0;
-    padding: 15px 40px;
+    padding: 4% 0%;
     font-weight: 800;
     font-size: 16px;
-    border-color: white;
-    border-bottom-width: 1.5px;
+    border: #FDC6E9 solid 1.5px;
+    width: 100%;
 
 }
 .left-panel-button__shade {
@@ -70,21 +74,24 @@ left-panel{
 }
 .shade_size_s{
     background-color: #CE7DBB;
-    padding: 2px  40px;
+    padding: 2px  0px;
     font-weight: 800;
-    width: 243px;
+    width: 100%;
     margin-bottom: 180px;
 
 }
 
 .central-panel{
     margin-left: 0;
+    width: 30%;
 }
 
 
 .central-panel__logo-first {
+    display: block;
     margin-top: 90px;
-    margin-left: 62px;
+    padding: 0% 14%;
+
 }
 
 .central-panel__img-first{
@@ -102,20 +109,21 @@ max-width: 100%;
 
 .central-panel-button__button {
     margin-top: 120px;
+    width: 100%;
 }
 .button_size_b {
     color:#95408C;
     background-color: #FDAEE0;
     font-weight: 800;
-    padding: 19px 92px;
+    padding: 4% 0px;
     font-size: 24px;
-    border-bottom-color: white;
-    border-bottom-width: 1.5px;
+    border: #FDC6E9 solid 1.5px;
+    width: 100%;
 }
 
 .central-panel-button__shade {
-    padding: 3px  40px;
-    width: 376px;
+    padding: 3px  0px;
+    width: 100%;
 }
 
 .shade{
@@ -123,6 +131,10 @@ max-width: 100%;
     font-weight: 800;
 }
 
+.right-panel{
+    width: 21%;
+
+}
 
 .right-panel__title{
     text-align: right;
@@ -134,8 +146,10 @@ max-width: 100%;
     text-align: center;
     color:#95408C;
     background-color: #FDAEE0;
-    padding: 17px 68px;
+    padding: 4.5% 0px;
+    width: 100%;
     font-weight: 800;
+    border: #FDC6E9 solid 1.5px;
 
 }
 
@@ -182,21 +196,21 @@ max-width: 100%;
     margin-bottom: 20px;
 }
 
+
+.second-section-button{
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .second-section-button__button {
     margin-top: 128px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-    
 }
+
 .second-section-button__shade{
-    padding: 2.5px  20px;
-    width: 359px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
+    padding: 2.5px  0px;
+    width: 100%;
 }
 
 
@@ -270,69 +284,73 @@ max-width: 100%;
     text-align: center;
 }
 
-.fourth-section-button__button{
+.fourth-section-button{
+    width: 30%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.fourth-section-button__button{
     margin-top: 128px;
+    width: 100%;
 }
 .fourth-section-button__shade{
-    padding: 3px  40px;
-    width: 384px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 3px 0px;
+    width: 100%;
+
+
 }
 
 
-.pozfon1 {
+.position-background-a {
     background-image: url(../img/pozfon1.svg);
-    top: 750px; /* Положение от верхнего края */
-    position: absolute; /* Абсолютное позиционирование */
-    width: 1600px; /* Ширина */ /* Поля */
-    min-height: 130px; /* Минимальная высота */
-    left: 0; right: 0; /* Нужно для выравнивания */
+    top: 15.6%;
+    position: absolute;
+    width: 1600px;
+    min-height: 130px;
+    left: 0; right: 0;
     margin: 0px auto 0;
     z-index: -100;
 }
-.pozfon2 {
+.position-background-b {
     background-color: #100C15;
-    top: 877px; /* Положение от верхнего края */
-    position: absolute; /* Абсолютное позиционирование */
-    width: 1600px; /* Ширина */ /* Поля */
-    height: 1751px; /* Минимальная высота */
-    left: 0; right: 0; /* Нужно для выравнивания */
+    top: 18.2%;
+    position: absolute;
+    width: 1600px;
+    height: 1751px;
+    left: 0; right: 0;
     margin: 0px auto 0;
     z-index: -100;
 }
-.pozfon3 {
+.position-background-c {
     background-image: url(../img/pozfon2.svg);
-    top: 2628px; /* Положение от верхнего края */
-    position: absolute; /* Абсолютное позиционирование */
-    width: 1600px; /* Ширина */ /* Поля */
-    min-height: 129px; /* Минимальная высота */
-    left: 0; right: 0; /* Нужно для выравнивания */
+    top: 54.1%;
+    position: absolute;
+    width: 1600px;
+    min-height: 129px;
+    left: 0; right: 0;
     margin: 0px auto 0;
     z-index: -100;
 }
-.pozfon4 {
+.position-background-d {
     background-image: url(../img/pozfon1.svg);
-    top: 3457px; /* Положение от верхнего края */
-    position: absolute; /* Абсолютное позиционирование */
-    width: 1600px; /* Ширина */ /* Поля */
-    min-height: 129px; /* Минимальная высота */
-    left: 0; right: 0; /* Нужно для выравнивания */
+    top: 71.2%;
+    position: absolute;
+    width: 1600px;
+    min-height: 129px;
+    left: 0; right: 0;
     margin: 0px auto 0;
     z-index: -100;
 }
 
-.pozfon5 {
+.position-background-e {
     background-color: #100C15;
-    top: 3584px; /* Положение от верхнего края */
-    position: absolute; /* Абсолютное позиционирование */
-    width: 1600px; /* Ширина */ /* Поля */
-    height: 741px; /* Минимальная высота */
-    left: 0; right: 0; /* Нужно для выравнивания */
+    top: 73.8%;
+    position: absolute;
+    width: 1600px;
+    height: 741px;
+    left: 0; right: 0;
     margin: 0px auto 0;
     z-index: -100;
 }
