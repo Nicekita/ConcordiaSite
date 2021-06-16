@@ -41,12 +41,9 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
     public function profile($userid): Response
     {
         $data = json_decode(file_get_contents('https://playerdb.co/api/player/minecraft/'.$userid));
-        $error=false;
-        if($userid==null) $error=true;
         $repository = $this->getDoctrine()->getRepository(Player::class);
         $requestedPlayer = $repository->findOneBy(['UUID'=>$userid]);
         $data = [
-            'error'=>$error,
             'Nick'=>$requestedPlayer->getNickName(),
             'Cash'=>$requestedPlayer->getCash(),
             'Image'=>$data->data->player->avatar

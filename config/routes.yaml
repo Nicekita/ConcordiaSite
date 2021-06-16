@@ -58,5 +58,5 @@ playerbyname:
     controller: App\Controller\API\PlayerAPI::getObjectbyName
     #schemes:    [https]
 specnews:
-    path: /specnews/{newsid}
+    path: /specnews/{newsid<\d+>?0}
     controller: App\Controller\NewsController::specific

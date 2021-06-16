@@ -14,10 +14,10 @@ class NewsController extends AbstractController
         return $this->render('newseditor.html.twig',[
             ]);
     }
-    public function specific(int $newsID): Response
+    public function specific(int $newsid): Response
     {
         $repository = $this->getDoctrine()->getRepository(News::class);
-        $news=$repository->find($newsID);
+        $news=$repository->find($newsid);
         return $this->render('specNews.html.twig',[
             'news' => $news,
         ]);
