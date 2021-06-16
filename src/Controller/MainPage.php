@@ -11,7 +11,9 @@ class MainPage extends AbstractController
 {
     public function index(): Response
     {
-        $playerCounter = 0;
+        $serverhost="play.originrealms.com";
+        $status = json_decode(file_get_contents('https://api.mcsrvstat.us/2/'.$serverhost));
+        $playerCounter = $status->players->online;
         $newsInPage=3;
         $repository = $this->getDoctrine()->getRepository(News::class);
         $allNews = $repository->findAll();

@@ -40,6 +40,7 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
     }
     public function profile($userid): Response
     {
+        $data = json_decode(file_get_contents('https://playerdb.co/api/player/minecraft/'.$userid));
         $error=false;
         if($userid==null) $error=true;
         $repository = $this->getDoctrine()->getRepository(Player::class);
@@ -47,11 +48,12 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
         $data = [
             'error'=>$error,
             'Nick'=>$requestedPlayer->getNickName(),
-            'Cash'=>$requestedPlayer->getCash()
+            'Cash'=>$requestedPlayer->getCash(),
+            'Image'=>$data->data->player->avatar
         ];
         if($requestedPlayer->getTown()!=null){
             $data['Town']=$requestedPlayer->getTown();
-        }
+        } else $data['Town']=null;
         return $this->render('profile.html.twig',$data);
     }
 }
