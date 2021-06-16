@@ -17,7 +17,7 @@
 
 .otd-page-news__wrapper {
     max-width: 1230px;
-    width: 50%;
+    width: 40%;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -41,19 +41,19 @@
     color: white;
     font-size: 24px;
     font-weight: 600;
-    margin-top: 32px;
+    padding: 10px 0px;
 }
 
 .otd-item-news__text{
     color:lightgrey;
     font-size: 24px;
     font-weight: 400;
-    margin-top: 32px;
+    padding:10px 0px;
 }
 
 .otd-item-news__date{
     color:lightgrey;
     font-size: 24px;
     font-weight: 400;
-    margin-top: 32px;
+    padding: 10px 0px;
 }
