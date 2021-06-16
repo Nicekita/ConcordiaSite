@@ -4,56 +4,56 @@
 index:
     path: /
     controller: App\Controller\MainPage::index
-    schemes:    [https]
+    #schemes:    [https]
 addnews:
     path: /newseditor
     controller: App\Controller\NewsController::add
-    schemes:    [https]
+    #schemes:    [https]
 newsadded:
     path: /api/news
     controller: App\Controller\API\NewsAPI::news
-    schemes:    [https]
+    #schemes:    [https]
 news:
     path: /news/{page<\d+>?0}
     controller: App\Controller\NewsController::index
-    schemes:    [https]
+    #schemes:    [https]
 player:
     path: /api/player
     controller: App\Controller\API\PlayerAPI::init
-    schemes:    [https]
+    # schemes:    [https]
 town:
     path: /api/town
     controller: App\Controller\API\TownAPI::init
-    schemes:    [https]
+    # schemes:    [https]
 realm:
     path: /api/realm
     controller: App\Controller\API\RealmAPI::init
-    schemes:    [https]
+    # schemes:    [https]
 about:
     path: /about
     controller: App\Controller\SimpleController::about
-    schemes:    [https]
+    #schemes:    [https]
 admin:
     path: /admin
     controller: App\Controller\SimpleController::admin
-    schemes:    [https]
+    #schemes:    [https]
 help:
     path: /help
     controller: App\Controller\SimpleController::help
-    schemes:    [https]
+    #schemes:    [https]
 ban:
     path: /ban
     controller: App\Controller\SimpleController::ban
-    schemes:    [https]
+    #schemes:    [https]
 profile:
     path: /profile/{userid?}
     controller: App\Controller\SimpleController::profile
-    schemes:    [https]
+    #schemes:    [https]
 customitem:
     path: /api/item
     controller: App\Controller\API\CustomItemAPI::init
-    schemes:    [https]
+    #schemes:    [https]
 playerbyname:
     path: /api/playerbyname
     controller: App\Controller\API\PlayerAPI::getObjectbyName
-    schemes:    [https]
+    #schemes:    [https]

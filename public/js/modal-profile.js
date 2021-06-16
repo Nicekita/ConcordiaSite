@@ -76,7 +76,7 @@ let btnCity = document.querySelector(".profile-info-button__city");
     function headerLogo() {
      let linkHeader = document.querySelector(".header-img");
      let logoHeader = document.querySelector(".header-logo");
-     if (window.location.href != "localhost") {
+     if (window.location.href = "") {
          linkHeader.classList.add("hidden-logo")
          logoHeader.classList.remove("hidden-logo")
      }

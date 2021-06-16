@@ -16,12 +16,12 @@
 }
 
 .header__wrapper{
-    max-width: 1230px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
+    padding-left:10px;
+    padding-right: 10px;
 }
 
 .header-panel{
@@ -48,20 +48,9 @@
 .navigation__link{
     text-decoration: none;
     color:#FFFFFF;
-    font-size: 15px;
+    font-size:  calc(7px + 7 * (100vw / 1200))
 }
 
-.navigation__select{
-    background: none;
-    text-decoration: none;
-    color:#FFFFFF;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    margin: -2px;
-    font-size: 15px;
-
-}
 
 .profile-button{
     width: 12.5%;
@@ -71,9 +60,9 @@
 .profile-button__button{
     color:#95408C;
     background-color: #FDAEE0;
-    padding: 5.5% 0%;
+    padding: 5% 0%;
     font-weight: 800;
-    font-size: 16px;
+    font-size:  calc(7px + 6 * (100vw / 1200));
     border: #FDC6E9 solid 1.5px;
     width: 100%;
 }
@@ -113,8 +102,9 @@
 
 .dropdown__title {
     color: white;
-    font-size: 16px;
+    font-size:  calc(7px + 7 * (100vw / 1200));
     cursor: pointer;
+    margin-bottom: 2px;
 }
 
 /* Контейнер <div> - необходимо разместить выпадающий контент */
@@ -128,12 +118,13 @@
     display: none;
     position: absolute;
     z-index: 1;
+    font-size:  calc(6px + 7 * (100vw / 1200));
 }
 
 /* Ссылки внутри выпадающего */
 .dropdown-content__link {
     color: white;
-    padding: 12px 2px;
+    padding: 10px 5px;
     text-decoration: none;
     display: block;
 }
@@ -158,6 +149,21 @@
 
 }
 
+@media screen and (max-width: 1200px) {
+    .header__wrapper{
+        max-width: 990px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .wrapper{
+        max-width: 900px ;
+    }
+
+    @media screen and (min-width: 930px) {
+
+    }
+}
 
 
 
