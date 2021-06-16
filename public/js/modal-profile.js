@@ -72,7 +72,11 @@ function myFunction(json) {
          logoHeader.classList.add("hidden-logo")
      }
 
-
+    let logo = document.querySelector(".header-logo__link");
+    logo.onclick = function (){
+        window.location.href = "http://" + window.location.hostname;
+        console.log(window.location.hostname);
+    }
 
 
 
