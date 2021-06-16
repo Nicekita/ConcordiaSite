@@ -12,10 +12,6 @@
                 <li class="nav-page-footer__item">
                     <a class="nav-page-footer__link" href="">Новости</a></li>
                 <li class="nav-page-footer__item">
-                    <a class="nav-page-footer__link" href="">Админ-лист</a></li>
-                <li class="nav-page-footer__item">
-                    <a class="nav-page-footer__link" href="">Бан-лист</a></li>
-                <li class="nav-page-footer__item">
                     <a class="nav-page-footer__link" href="">О проекте</a></li>
                 </ul>
             </nav>
@@ -27,7 +23,7 @@
                 <li class="nav-page-footer__item">
                     <a class="nav-page-footer__link" href="">Руководство</a></li>
                 <li class="nav-page-footer__item">
-                    <a class="nav-page-footer__link" href="">Энциклопедия</a></li>
+                    <a class="nav-page-footer__link" href="{{ path('help') }}">Энциклопедия</a></li>
                 <li class="nav-page-footer__item">
                     <a class="nav-page-footer__link" href="">Правила</a></li>
                 </ul>
@@ -38,9 +34,9 @@
                 <p class="nav-page-footer__title">Сообщество</p>
                 <ul class="nav-page-footer__block">
                 <li class="nav-page-footer__item">
-                    <a class="nav-page-footer__link" href="">Вконтакте</a></li>
+                    <a class="nav-page-footer__link" href="https://vk.com/concordiacraft">Вконтакте</a></li>
                 <li class="nav-page-footer__item">
-                    <a class="nav-page-footer__link" href="">Discord</a></li>
+                    <a class="nav-page-footer__link" href="https://discord.gg/3qEtBJsq">Discord</a></li>
                 </ul>
             </nav>
                 </div>
@@ -50,9 +46,9 @@
             <div class="low-panel-footer">
             <span class="low-panel-footer__title">© 2021 ConcordiaCraft. Все права упразднены</span>
             <div class="low-panel-footer__img">
-                <img class="low-panel-footer__img low-panel-footer__img-theme-vk"src="/img/Vk.png" alt="" width="22px" height="18px">
+                <img class="low-panel-footer__img low-panel-footer__img-theme-vk" src="{{asset('img/Vk.svg')}}" alt="" width="22px" height="22px">
 
-                <img class="low-panel-footer__img low-panel-footer__img-theme-discord" src="/img/Discord.png" alt="" width="22px" height="22px">
+                <img class="low-panel-footer__img low-panel-footer__img-theme-discord" src="{{asset('img/Discord.svg')}}" alt="" width="22px" height="22px">
 
             </div>
 

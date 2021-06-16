@@ -55,38 +55,26 @@ function myFunction(json) {
         }
 }
 
-let btnCity = document.querySelector(".profile-info-button__city");
-    let btnPerson = document.querySelector(".profile-info-button__person");
-    let windowCity = document.querySelector(".profile-info-main-city");
-    let windowPerson = document.querySelector(".profile-info-main-person");
- btnCity.onclick = function () {
-     btnPerson.classList.remove("profile-info-button_color_darker");
-     btnCity.classList.add("profile-info-button_color_darker");
-     windowPerson.classList.add("profile-info-main_theme_hidden");
-     windowCity.classList.remove("profile-info-main_theme_hidden");
- }
-    btnPerson.onclick = function () {
-        btnPerson.classList.add("profile-info-button_color_darker");
-        btnCity.classList.remove("profile-info-button_color_darker");
-        windowPerson.classList.remove("profile-info-main_theme_hidden");
-        windowCity.classList.add("profile-info-main_theme_hidden");
-    }
 
 
-    function headerLogo() {
      let linkHeader = document.querySelector(".header-img");
      let logoHeader = document.querySelector(".header-logo");
-     if (window.location.href = "") {
+     let linkPage = window.location;
+     console.log(window.location.pathname)
+     if (window.location.pathname != "/") {
+         console.log("sitepage")
          linkHeader.classList.add("hidden-logo")
          logoHeader.classList.remove("hidden-logo")
      }
-     else
+      else
      {
          linkHeader.classList.remove("hidden-logo")
          logoHeader.classList.add("hidden-logo")
      }
 
 
-    }
+
+
+
 
 })

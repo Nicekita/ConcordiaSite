@@ -11,6 +11,7 @@
 <body>
 {{ include('main/header.html.twig') }}
     <main>
+        <script src="{{ ('js/index.js') }}"></script>
         <section class="first-section">
             <div class="first-section__wrapper wrapper">
             <div class=first-section__panel>
@@ -58,7 +59,7 @@
             </div>
             </div>
         </div>
-            <div class="position-background-a ground"></div>
+            <div id="ground" class="position-background-a ground"></div>
         </section>
         <section class="second-section">
             <div class="second-section__title title"><span>О ПРОЕКТЕ</span></div>
@@ -99,12 +100,14 @@
                 </div>
               </div>
                 <div class="second-section-button">
+                    <form action="{{ path('about') }}">
                     <button class="second-section-button__button button_size_b">ПОДРОБНЕЕ</button>
                     <div class="second-section-button__shade shade"></div>
+                    </form>
             </div>
             </div>
-            <div class="position-background-b ground"></div>
-            <div class="position-background-c ground"></div>
+            <div id="ground" class="position-background-b ground"></div>
+            <div id="ground" class="position-background-c ground"></div>
         </section>
         <section class="third-section">
             <div class="third-section__wrapper">
@@ -138,12 +141,14 @@
                     </div>
                 </div>
             <div  class="fourth-section-button">
-                <button class="fourth-section-button__button button_size_b">ВСЕ НОВОСТИ</button>
+                <form action="{{ path('news',{'page':0}) }}">
+                <button class="fourth-section-button__button button_size_b ">ВСЕ НОВОСТИ</button>
+                </form>
                 <div class="fourth-section-button__shade shade"></div>
                 </div>
             </div>
-            <div class="position-background-d ground "></div>
-            <div class="position-background-e ground"></div>
+            <div id="ground" class="position-background-d ground "></div>
+            <div id="ground" class="position-background-e ground"></div>
         </section>
     </main>
 {{ include('main/footer.html.twig') }}

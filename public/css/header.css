@@ -51,6 +51,20 @@
     font-size:  calc(7px + 7 * (100vw / 1200))
 }
 
+.navigation__link:hover{
+    text-decoration: none;
+    color:lightgrey;
+    font-size:  calc(7px + 7 * (100vw / 1200))
+}
+
+.navigation__link_color_grey{
+    color: grey;
+}
+
+.navigation__link_color_grey:hover{
+    color: grey;
+}
+
 
 .profile-button{
     width: 12.5%;
@@ -66,6 +80,12 @@
     border: #FDC6E9 solid 1.5px;
     width: 100%;
 }
+
+.profile-button__button:hover{
+    background-color: #fabee4;
+    cursor: pointer;
+}
+
 .profile-button__shade{
     background-color: #CE7DBB;
     padding: 2px  0%;
@@ -81,18 +101,27 @@
     margin-left: 10%;
     border: white 1.5px solid;
     padding: 7px 5px;
-    background-color: grey;
+}
+
+.header-img__Discord:hover{
+    border: black 1.5px solid;
+    background-color: black;
 }
 
 .header-img__Vk{
-    margin-left: 10%;
     border: white 1.5px solid;
     padding: 7px 5px;
 }
 
+.header-img__Vk:hover{
+    border: black 1.5px solid;
+    background-color: black;
+}
+
 .header-logo{
     width: 12.5%;
-    margin-top: 40px;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 .hidden-logo{
@@ -102,6 +131,13 @@
 
 .dropdown__title {
     color: white;
+    font-size:  calc(7px + 7 * (100vw / 1200));
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.dropdown__title:hover {
+    color: lightgrey;
     font-size:  calc(7px + 7 * (100vw / 1200));
     cursor: pointer;
     margin-bottom: 2px;

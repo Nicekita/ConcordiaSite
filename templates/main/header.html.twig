@@ -5,23 +5,22 @@
     <div class="header__wrapper">
         <nav class="header-panel">
             <div class="header-img">
-                <img class="header-img__Vk" src="img/Vk.png" width="35px" height="31px">
-                <img class="header-img__Discord" src="img/Discord.png" width="35x" height="31px">
+                <a class="header-img" href="https://vk.com/concordiacraft"><img class="header-img__Vk" src="{{asset ("img/Vk.svg")}}" width="35px" height="31px" ></a>
+                <a class="header-img" href="https://discord.gg/3qEtBJsq"><img class="header-img__Discord" src="{{asset ("img/Discord.svg")}}" width="35x" height="31px"></a>
             </div>
             <div class="header-logo hidden-logo">
-            <img src="img/logotype.png" class="logotype ">
+            <a class=" header-logo__link"><img src="{{asset ("img/logo.png")}}" class="logotype "></a>
             </div>
             <ul class="navigation">
                 <li class="navigation__item"><a class="navigation__link" href="{{ path('news',{'page':0}) }}">НОВОСТИ</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="">КАРТА</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="">МАГАЗИН</a></li>
+                <li class="navigation__item"><a class="navigation__link navigation__link_color_grey" >МАГАЗИН</a></li>
                 <li class="navigation__item">
                     <div class="dropdown">
                         <p class="dropdown__title">ПОМОЩЬ <i class="dropdown_span"></i></p>
                         <div class="dropdown-content">
-                            <a class="dropdown-content__link" href="#">РУКОВОДСТО</a>
-                            <a class="dropdown-content__link" href="#">АДМИН-ЛИСТ</a>
-                            <a class="dropdown-content__link" href="#">БАН-ЛСИТ</a>
+                            <a class="dropdown-content__link" href="{{ path('help') }}">ЭНЦИКЛОПЕДИЯ</a>
+                            <a class="dropdown-content__link" href="{{ path('about') }}">О ПРОЕКТЕ</a>
                         </div>
                     </div>
                 </li>

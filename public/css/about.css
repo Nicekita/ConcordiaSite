@@ -44,12 +44,13 @@
 
 .about-description__text{
     padding: 15px 15px;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 .about-features__item{
-    font-size: 19px;
-    padding: 5px 15px;
+    font-size: 22px;
+    padding: 8px 15px;
     list-style-type: none;
 
 }

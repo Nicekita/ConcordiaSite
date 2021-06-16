@@ -70,6 +70,7 @@
     border-color: white;
     border-width: 2px;
     width: 100%;
+    cursor: pointer;
 }
 
 .profile-info-button__city{
@@ -81,10 +82,12 @@
     border-color: white;
     border-width: 2px;
     width: 100%;
+    cursor: pointer;
 }
 
 .profile-info-button_color_darker{
-    background: rgb(255, 133, 185);
+    background-color: #f2a0d4;
+    cursor: none;
 }
 
 .profile-info-button__shade{

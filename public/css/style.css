@@ -69,9 +69,13 @@ background-attachment: fixed;
     font-size: calc(8px + 6 * (100vw / 1200));
     border: #FDC6E9 solid 1.5px;
     width: 100%;
-
-
 }
+
+.button_size_s:hover{
+    background-color: #ffb8e5;
+    cursor: pointer;
+}
+
 .left-panel-button__shade {
 
 }
@@ -122,6 +126,11 @@ max-width: 100%;
     font-size: calc(12px + 8 * (100vw / 1200));
     border: #FDC6E9 solid 1.5px;
     width: 100%;
+}
+
+.button_size_b:hover{
+    background-color: #fabee4;
+    cursor: pointer;
 }
 
 .central-panel-button__shade {
@@ -308,8 +317,6 @@ max-width: 100%;
 .fourth-section-button__shade{
     padding: 3px 0px;
     width: 100%;
-
-
 }
 
 
@@ -317,64 +324,62 @@ max-width: 100%;
     background-image: url(../img/pozfon1.svg);
     top: 15.6%;
     position: absolute;
-    width: 1600px;
-    min-height: 130px;
+    max-width: 1600px;
+    min-height: 135px;
     left: 0; right: 0;
     margin: 0px auto 0;
     z-index: -100;
+    width: 100%;
 }
 .position-background-b {
     background-color: #100C15;
     top: 18.2%;
     position: absolute;
-    width: 1600px;
-    height: 1751px;
+    max-width: 1600px;
+    height: 35.92%;
     left: 0; right: 0;
     margin: 0px auto 0;
     z-index: -100;
+    width: 100%;
 }
 .position-background-c {
     background-image: url(../img/pozfon2.svg);
     top: 54.1%;
     position: absolute;
-    width: 1600px;
-    min-height: 129px;
+    max-width: 1600px;
+    min-height: 127px;
     left: 0; right: 0;
     margin: 0px auto 0;
     z-index: -100;
+    width: 100%;
 }
 .position-background-d {
     background-image: url(../img/pozfon1.svg);
     top: 71.2%;
     position: absolute;
-    width: 1600px;
-    min-height: 129px;
+    max-width: 1600px;
+    min-height: 135px;
     left: 0; right: 0;
     margin: 0px auto 0;
     z-index: -100;
+    width: 100%;
 }
 
 .position-background-e {
     background-color: #100C15;
     top: 73.8%;
     position: absolute;
-    width: 1600px;
-    height: 741px;
+    max-width: 1600px;
+    height: 19%;
     left: 0; right: 0;
     margin: 0px auto 0;
     z-index: -100;
+    width: 100%;
 }
 
 @media screen and (max-width: 1200px) {
     .wrapper{
         max-width: 990px ;
-    }
-    .position-background-b {
-        height: 1500px;
-    }
-
-    .position-background-c {
-        top: 50.7%;
     }
 
     .ground{
@@ -387,21 +392,34 @@ max-width: 100%;
 }
 
 @media screen and (max-width: 992px) {
-    .wrapper{
-        max-width: 900px ;
+    .wrapper {
+        max-width: 900px;
     }
-    .ground{
+
+    .ground {
         width: 992px;
     }
+
     .position-background-b {
         height: 1380px;
     }
 
     .position-background-c {
-        top: 48.97%;
+        top: 49.55%;
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
