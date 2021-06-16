@@ -3,17 +3,25 @@
 namespace App\Controller;
 
 use App\Entity\News;
+use App\Service\GetJSON;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MainPage extends AbstractController
 {
-    public function index(): Response
+    public function index(GetJSON $JSON): Response
     {
         $serverhost="play.originrealms.com";
-        $status = json_decode(file_get_contents('https://api.mcsrvstat.us/2/'.$serverhost));
-        $playerCounter = $status->players->online;
+        try {
+            $jsonRequest = $JSON->decode('https://api.mcsrvstat.us/2/'.$serverhost);
+            $playerCounter = $jsonRequest->players->online;
+        }
+        catch (Exception $e){
+            $playerCounter = 0;
+        }
+
         $newsInPage=3;
         $repository = $this->getDoctrine()->getRepository(News::class);
         $allNews = $repository->findAll();
