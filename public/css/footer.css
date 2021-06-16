@@ -92,11 +92,13 @@ background-attachment: fixed;
     margin-right: 15px;
 }
 
-
+.page-footer-hr{
+    z-index: 10000;
+    background-color: white;
+}
 .page-footer__hr{
     color: #2C3840;
     margin-top: 148px;
-    z-index: 1000;
     background-color: #0B070D;
 }
 

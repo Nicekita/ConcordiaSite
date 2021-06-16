@@ -10,7 +10,7 @@
                 <p class="nav-page-footer__title">Проект</p>
                 <ul  class="nav-page-footer__block">
                 <li class="nav-page-footer__item">
-                    <a class="nav-page-footer__link" href="">Новости</a></li>
+                    <a class="nav-page-footer__link" href="{{ path('news',{'page':0}) }}">Новости</a></li>
                 <li class="nav-page-footer__item">
                     <a class="nav-page-footer__link" href="">О проекте</a></li>
                 </ul>
@@ -25,7 +25,7 @@
                 <li class="nav-page-footer__item">
                     <a class="nav-page-footer__link" href="{{ path('help') }}">Энциклопедия</a></li>
                 <li class="nav-page-footer__item">
-                    <a class="nav-page-footer__link" href="">Правила</a></li>
+                    <a class="nav-page-footer__link" href="{{ path('about') }}">Правила</a></li>
                 </ul>
             </nav>
                 </div>
@@ -41,15 +41,17 @@
             </nav>
                 </div>
         </div>
-        <hr class="page-footer__hr">
+        <div class="page-footer-hr">
+          <hr class="page-footer__hr">
+        </div>
         <div class="page-footer__low-panel">
             <div class="low-panel-footer">
             <span class="low-panel-footer__title">© 2021 ConcordiaCraft. Все права упразднены</span>
             <div class="low-panel-footer__img">
-                <img class="low-panel-footer__img low-panel-footer__img-theme-vk" src="{{asset('img/Vk.svg')}}" alt="" width="22px" height="22px">
+                <a href="https://vk.com/concordiacraft"><img class="low-panel-footer__img low-panel-footer__img-theme-vk" src="{{asset('img/Vk.svg')}}" alt="" width="22px" height="22px"></a>
 
-                <img class="low-panel-footer__img low-panel-footer__img-theme-discord" src="{{asset('img/Discord.svg')}}" alt="" width="22px" height="22px">
-
+                <a href="https://discord.gg/3qEtBJsq" ><img class="low-panel-footer__img low-panel-footer__img-theme-discord" src="{{asset('img/Discord.svg')}}" alt="" width="22px" height="22px"></a>
+             </div>
             </div>
 
         </div>

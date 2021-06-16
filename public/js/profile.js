@@ -15,5 +15,4 @@ btnPerson.onclick = function () {
     windowPerson.classList.remove("profile-info-main_theme_hidden");
     windowCity.classList.add("profile-info-main_theme_hidden");
 }
-
 })

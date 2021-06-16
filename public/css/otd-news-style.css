@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.otd-page-news {
+    font-family: 'Montserrat', sans-serif;
+    color:#FFFFFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    background-color: #100C15;
+
+}
+
+.otd-page-news__wrapper {
+    max-width: 1230px;
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.otd-page-news__main {
+    padding: 15px;
+    margin-top: 85px;
+    margin-bottom: 85px;
+}
+
+
+.otd-item-news__img {
+    background-color: lightgrey;
+    height: 302px;
+}
+
+.otd-item-news__title{
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 32px;
+}
+
+.otd-item-news__text{
+    color:lightgrey;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 32px;
+}
+
+.otd-item-news__date{
+    color:lightgrey;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 32px;
+}

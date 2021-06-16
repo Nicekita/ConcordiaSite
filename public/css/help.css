@@ -55,10 +55,11 @@
     color: white;
     margin: 10px 0px;
     font-size: 22px;
+
 }
 .help-column__img{
-    max-width: 10px;
-    max-height: 10px;
+    max-width: 25px;
+    max-height: 18px;
 }
 
 .help-column__title{

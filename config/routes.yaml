@@ -57,3 +57,6 @@ playerbyname:
     path: /api/playerbyname
     controller: App\Controller\API\PlayerAPI::getObjectbyName
     #schemes:    [https]
+
+otdnews:
+    path: /otd
