@@ -35,7 +35,7 @@ class MainPage extends AbstractController
                 'playercount' => $playerCounter
             ]);
         }
-        for($i=0;$i<$newsInPage;$i++){
+        for($i=0;$i<$newsInPage&&$i<$allNews;$i++){
             $newsArray[$i]=$allNews[$i];
         }
         return $this->render('index.html.twig', [
