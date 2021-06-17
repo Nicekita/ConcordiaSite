@@ -28,7 +28,7 @@ class MainPage extends AbstractController
         $allNews = $repository->findAll();
         $newsArray=array();
         $nonews=false;
-        if($newsInPage>sizeof($newsArray)) {$nonews=true;
+        if(sizeof($newsArray)==0) {$nonews=true;
         return $this->render('index.html.twig', [
             'nonews' => $nonews,
             'playercount' => $playerCounter
