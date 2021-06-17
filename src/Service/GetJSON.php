@@ -16,9 +16,5 @@ class GetJSON
             } else {
                 return json_decode($str);
             }
-
-
-// Example
-
     }
 }
