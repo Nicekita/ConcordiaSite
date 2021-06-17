@@ -132,7 +132,7 @@
                         <div class="fourth-section-block">
                             <div class="fourth-section-block__img-size-s"></div>
                             <h2 class="fourth-section-block__title">{{news.header}} </h2>
-                            <p class="fourth-section-block__data">{{ news.date }}</p>
+                            <p class="fourth-section-block__data">{{news.date|date("d.m.Y")}}</p>
                         </div>
                     {% endfor %}
                 {% endif %}
