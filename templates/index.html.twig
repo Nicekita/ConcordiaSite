@@ -146,6 +146,8 @@
                     <h2 class="fourth-section-block__title">ПРЕДРЕЛИЗ ПРОЕКТА 0.4.3</h2>
                     <p class="fourth-section-block__data">20.03.2021</p>
                 </div>
+
+                {{ path('specnews',{'newsid':news.id}) }} // ССЫЛКА
                 <div class="fourth-section-block">
                     <div class="fourth-section-block__img-size-s"></div>
                     <h2 class="fourth-section-block__title">И ТУТ МЫ ЧЁ-ТО ДОБАВИЛИ </h2>
@@ -153,6 +155,7 @@
                     </div>#}
                 </div>
             <div  class="fourth-section-button">
+
                 <form action="{{ path('news',{'page':0}) }}">
                 <button class="fourth-section-button__button button_size_b ">ВСЕ НОВОСТИ</button>
                 </form>
