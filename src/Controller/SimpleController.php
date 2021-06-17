@@ -54,4 +54,7 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
 
         return $this->render('profile.html.twig',$data);
     }
+    public function map(){
+        return $this->render('map.html.twig');
+    }
 }

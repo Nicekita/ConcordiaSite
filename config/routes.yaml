@@ -52,3 +52,6 @@ playerbyname:
 specnews:
     path: /specnews/{newsid<\d+>?0}
     controller: App\Controller\NewsController::specific
+map:
+    path: /map
+    controller: App\Controller\SimpleController::map
