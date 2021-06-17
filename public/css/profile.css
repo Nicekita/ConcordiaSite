@@ -42,9 +42,6 @@
 }
 
 .profile-player__img{
-    width: 256px;
-    height: 256px;
-    background-color: grey;
     margin-top: 15px;
 }
 
@@ -116,4 +113,23 @@
 .profile-main-section__text{
     color: lightgrey;
     font-size: 18px;
+}
+
+@media screen and(max-width: 375px){
+    .profile__wrapper{
+        margin-top: 130px;
+        display:block;
+        margin-bottom: 360px;
+    }
+
+    .wrapper{
+        max-width: 360px;
+    }
+
+    .profile-info{
+        width: 80%;
+        height: 100%;
+        margin-top: 30px;
+    }
+
 }

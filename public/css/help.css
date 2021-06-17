@@ -69,3 +69,17 @@
     color: grey;
     padding-top: 10px
 }
+
+@media screen and (max-width:480px){
+    .help__table{
+        display: block;
+        margin-bottom: 300px;
+    }
+
+    .help__row{
+        max-width: 100%;
+        height: 100% ;
+        margin: 20px 0px;
+    }
+
+}

@@ -48,13 +48,13 @@
 .navigation__link{
     text-decoration: none;
     color:#FFFFFF;
-    font-size:  calc(7px + 7 * (100vw / 1200))
+    font-size:  calc(9px + 5 * (100vw / 1200));
 }
 
 .navigation__link:hover{
     text-decoration: none;
     color:lightgrey;
-    font-size:  calc(7px + 7 * (100vw / 1200))
+    font-size:  calc(9px + 5 * (100vw / 1200));
 }
 
 .navigation__link_color_grey{
@@ -76,7 +76,7 @@
     background-color: #FDAEE0;
     padding: 5% 0%;
     font-weight: 800;
-    font-size:  calc(7px + 6 * (100vw / 1200));
+    font-size:  calc(8px + 6 * (100vw / 1200));
     border: #FDC6E9 solid 1.5px;
     width: 100%;
 }
@@ -131,14 +131,14 @@
 
 .dropdown__title {
     color: white;
-    font-size:  calc(7px + 7 * (100vw / 1200));
+    font-size:  calc(9px + 5 * (100vw / 1200));
     cursor: pointer;
     margin-bottom: 2px;
 }
 
 .dropdown__title:hover {
     color: lightgrey;
-    font-size:  calc(7px + 7 * (100vw / 1200));
+    font-size:  calc(9px + 5 * (100vw / 1200));
     cursor: pointer;
     margin-bottom: 2px;
 }
@@ -154,7 +154,7 @@
     display: none;
     position: absolute;
     z-index: 1;
-    font-size:  calc(6px + 7 * (100vw / 1200));
+    font-size:  calc(9px + 5 * (100vw / 1200));
 }
 
 /* Ссылки внутри выпадающего */
@@ -192,13 +192,83 @@
 }
 
 @media screen and (max-width: 992px) {
-    .wrapper{
+    .header__wrapper{
         max-width: 900px ;
     }
+}
 
-    @media screen and (min-width: 930px) {
+@media screen and (max-width: 768px){
+    .header__wrapper{
+        max-width: 718px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header__wrapper {
+        max-width: 460px;
+    }
+
+    .header-img__Vk{
+        padding: 2px 2.5px;
+        width: 22px;
+        height: 19px;
+    }
+
+    .header-img__Discord{
+        padding: 2px 2.5px;
+        width: 22px;
+        height: 19px;
+    }
+
+    .navigation__item {
+        margin-left: 2px;
+        margin-right: 3px;
+        margin-top: 23px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .header__wrapper {
+        max-width: 375px;
+    }
+
+    .header-img__Vk{
+        padding: 2px 1.5px;
+        width: 19px;
+        height: 14px;
+    }
+
+    .header-img__Discord{
+        padding: 2px 1.5px;
+        width: 19px;
+        height: 14px;
+        margin-left: 1px;
+    }
+
+    .navigation{
+        width: 68%;
+    }
+
+    .profile-button{
+        width: 17.5%;
+    }
+
+    .header-img{
+        width: 14.5%;
+        margin-top: 35px;
 
     }
+}
+
+@media screen and (max-width: 360px) {
+    .header__wrapper{
+        max-width: 360px ;
+    }
+    .ground{
+        max-width: 360px;
+    }
+
 }
 
 
