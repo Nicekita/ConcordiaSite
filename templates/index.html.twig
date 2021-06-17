@@ -124,9 +124,21 @@
             <div class="fourth-section__title title"><span>НОВОСТИ</span></div>
             <div class="fourth-section__wrapper wrapper">
             <div class="fourth-section-column">
-                <div class="fourth-section-block">
+                {% if nonews==true %}
+                    there is no news
+                {% endif %}
+                {% if nonews==false %}
+                    {% for news in newsArray %}
+                        <div class="fourth-section-block">
+                            <div class="fourth-section-block__img-size-s"></div>
+                            <h2 class="fourth-section-block__title">{{news.header}} </h2>
+                            <p class="fourth-section-block__data">{{ news.date }}</p>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {#<div class="fourth-section-block">
                     <div class="fourth-section-block__img-size-s"></div>
-                   <h2 class="fourth-section-block__title">МЫ ДОБАВИЛИ ЧЁ-ТО НОВОЕ </h2>
+                    <h2 class="fourth-section-block__title">МЫ ДОБАВИЛИ ЧЁ-ТО НОВОЕ </h2>
                     <p class="fourth-section-block__data">14.03.2021</p>
                 </div>
                 <div class="fourth-section-block">
@@ -139,7 +151,7 @@
                     <h2 class="fourth-section-block__title">И ТУТ МЫ ЧЁ-ТО ДОБАВИЛИ </h2>
                     <p class="fourth-section-block__data">10.03.2021</p>
                     </div>
-                </div>
+                </div>#}
             <div  class="fourth-section-button">
                 <form action="{{ path('news',{'page':0}) }}">
                 <button class="fourth-section-button__button button_size_b ">ВСЕ НОВОСТИ</button>
