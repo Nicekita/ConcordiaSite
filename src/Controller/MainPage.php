@@ -26,13 +26,14 @@ class MainPage extends AbstractController
         $newsInPage=3;
         $repository = $this->getDoctrine()->getRepository(News::class);
         $allNews = $repository->findAll();
-        $newsArray=array();
         $nonews=false;
-        if(sizeof($newsArray)==0) {$nonews=true;
-        return $this->render('index.html.twig', [
-            'nonews' => $nonews,
-            'playercount' => $playerCounter
-        ]);}
+        if(sizeof($allNews)==0) {
+            $nonews=true;
+            return $this->render('index.html.twig', [
+                'nonews' => $nonews,
+                'playercount' => $playerCounter
+            ]);
+        }
         for($i=0;$i<$newsInPage;$i++){
             $newsArray[$i]=$allNews[$i];
         }
