@@ -136,6 +136,10 @@ background-attachment: fixed;
     width: 1200px;
 }
 
+    .pozfon7.ground {
+        height: 560px;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -156,6 +160,11 @@ background-attachment: fixed;
         max-width: 718px;
     }
 
+    .pozfon7.ground {
+        height: 540px;
+
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -164,6 +173,11 @@ background-attachment: fixed;
     }
     .ground{
         max-width: 480px;
+    }
+
+    .pozfon7.ground {
+        height: 540px;
+
     }
 
 }
@@ -176,8 +190,8 @@ background-attachment: fixed;
         max-width: 375px;
     }
 
-    .pozfon7 {
-        height: 570px;
+    .pozfon7.ground {
+        height: 540px;
 
     }
 
@@ -190,8 +204,6 @@ background-attachment: fixed;
     .ground{
         max-width: 360px;
     }
-
-
 
 }
 

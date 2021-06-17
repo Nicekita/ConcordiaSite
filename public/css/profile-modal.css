@@ -69,6 +69,7 @@
 .profile-form__title{
     margin-bottom: 60px;
     color: white;
+    font-size: calc(8px + 34 * (100vw / 1800));
 }
 
 .profile-window{
