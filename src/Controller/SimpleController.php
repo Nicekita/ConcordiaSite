@@ -7,6 +7,8 @@ namespace App\Controller;
 use App\Entity\Ban;
 use App\Entity\CustomItem;
 use App\Entity\Player;
+use App\Service\GetJSON;
+use Exception;
 use Symfony\Component\HttpFoundation\Response;
 
 class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController
@@ -38,18 +40,28 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
             'allBans'=>$allBans
         ]);
     }
-    public function profile($userid): Response
+    public function profile($userid,GetJSON $JSON): Response
     {
-        $data = json_decode(file_get_contents('https://playerdb.co/api/player/minecraft/'.$userid));
+        try {
+            $jsonRequest = $JSON->decode('https://playerdb.co/api/player/minecraft/' . $userid);
+            $imageUrl=$jsonRequest->data->player->avatar;
+        }
+        catch (Exception $e){
+            $imageUrl = null;
+        }
+
+
         $repository = $this->getDoctrine()->getRepository(Player::class);
         $requestedPlayer = $repository->findOneBy(['UUID'=>$userid]);
         $data = [
             'Nick'=>$requestedPlayer->getNickName(),
             'Cash'=>$requestedPlayer->getCash(),
-            'Image'=>$data->data->player->avatar
+            'Image'=>$imageUrl
         ];
         if($requestedPlayer->getTown()!=null){
-            $data['Town']=$requestedPlayer->getTown();
+            $data['TownName']=$requestedPlayer->getTown()->getName();
+            $data['TownCash']=$requestedPlayer->getTown()->getCash();
+            $data['TownOwner']=$requestedPlayer->getTown()->getOwner();
         } else $data['Town']=null;
         return $this->render('profile.html.twig',$data);
     }

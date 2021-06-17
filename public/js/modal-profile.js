@@ -39,8 +39,6 @@ let error = document.querySelector(".error")
            }
         }
     }
-
-
 function myFunction(json) {
     let data = JSON.parse(json);
     console.log(data);
@@ -54,9 +52,6 @@ function myFunction(json) {
             error.classList.add('profile-form__error');
         }
 }
-
-
-
      let linkHeader = document.querySelector(".header-img");
      let logoHeader = document.querySelector(".header-logo");
      let linkPage = window.location;
