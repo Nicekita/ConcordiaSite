@@ -19,37 +19,14 @@
         </div>
         <div class="help__table">
             <div class="help__row">
+                {% for item in allItems %}
                 <div class="help-column">
-                    <h4 class="help-column__title">Каменное копье</h4>
-                    <p class="help-column__description"><img class="help-column-img__craft" src="{{asset ("img/craft.jpeg")}}"> Копьё наносит на 25% больше урона если пользаваться им верхом на коне.</p>
+                    <img class="help-column__img" src="{{asset ('img/items/'~item.craftImage)}}">
+                    <h4 class="help-column__title">{{item.Name}}</h4>
+                    <p class="help-column__description"> {{ item.description }}.</p>
                 </div>
-                <div class="help-column">
-                    <h4 class="help-column__title">Железное копьё</h4>
-                    <p class="help-column__description"><img class="help-column-img__craft" src="{{asset ("img/craft.jpeg")}}"> Копьё наносит на 25% больше урона если пользаваться им верхом на коне.</p>
-                </div>
-                <div class="help-column">
-                    <h4 class="help-column__title">Деревянное копьё</h4>
-                    <p class="help-column__description"><img class="help-column-img__craft" src="{{asset ("img/craft.jpeg")}}"> Копьё наносит на 25% больше урона если пользаваться им верхом на коне.</p>
-                </div>
+                {% endfor %}
             </div>
-            <div class="help__row">
-                <div class="help-column">
-                    <h4 class="help-column__title">Флаг города</h4>
-                    <p class="help-column__description"><img class="help-column-img__craft" src="{{asset ("img/craft.jpeg")}}"> Описание: Это Артефакт, указывает на границы вашего города</p>
-                </div>
-                <div class="help-column">
-                    <img class="help-column__img" src="img/item.png">
-                    <h4 class="help-column__title">Тросс</h4>
-                    <p class="help-column__description"><img class="help-column-img__craft" src="{{asset ("img/craft.jpeg")}}"> Описание: Это Артефакт, который даёт уникальльную скалолазанья </p>
-                </div>
-            </div>
-            <div class="help__row">
-                <div class="help-column">
-                    <h4 class="help-column__title">Кастомер ending</h4>
-                    <p class="help-column__description"><img class="help-column-img__craft" src="{{asset ("img/craft.jpeg")}}"> Описание:  + 17% к регенерации здоровья</p>
-                </div>
-            </div>
-
         </div>
     </div>
 

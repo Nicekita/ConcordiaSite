@@ -33,17 +33,9 @@ about:
     path: /about
     controller: App\Controller\SimpleController::about
     #schemes:    [https]
-admin:
-    path: /admin
-    controller: App\Controller\SimpleController::admin
-    #schemes:    [https]
 help:
     path: /help
     controller: App\Controller\SimpleController::help
-    #schemes:    [https]
-ban:
-    path: /ban
-    controller: App\Controller\SimpleController::ban
     #schemes:    [https]
 profile:
     path: /profile/{userid?}

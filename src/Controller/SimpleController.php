@@ -18,26 +18,12 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
         return $this->render('about.html.twig',[
         ]);
     }
-    public function admin(): Response
-    {
-        return $this->render('admin.html.twig',[
-        ]);
-    }
     public function help(): Response
     {
         $repository = $this->getDoctrine()->getRepository(CustomItem::class);
         $allItems=$repository->findAll();
         return $this->render('help.html.twig',[
             'allItems'=>$allItems
-        ]);
-    }
-    public function ban(): Response
-    {
-        $data = array();
-        $repository = $this->getDoctrine()->getRepository(Ban::class);
-        $allBans = $repository->findAll();
-        return $this->render('ban.html.twig',[
-            'allBans'=>$allBans
         ]);
     }
     public function profile($userid,GetJSON $JSON): Response
@@ -62,7 +48,10 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
             $data['TownName']=$requestedPlayer->getTown()->getName();
             $data['TownCash']=$requestedPlayer->getTown()->getCash();
             $data['TownOwner']=$requestedPlayer->getTown()->getOwner();
-        } else $data['Town']=null;
+        } else {$data['TownName']=null;
+        $data['TownCash']=null;
+        $data['TownOwner']=null;}
+
         return $this->render('profile.html.twig',$data);
     }
 }

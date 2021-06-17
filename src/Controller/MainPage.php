@@ -13,7 +13,7 @@ class MainPage extends AbstractController
 {
     public function index(GetJSON $JSON): Response
     {
-        $serverhost="play.originrealms.com";
+        $serverhost="play.concordiacraft.org";
         try {
             $jsonRequest = $JSON->decode('https://api.mcsrvstat.us/2/'.$serverhost);
             $playerCounter = $jsonRequest->players->online;
@@ -37,7 +37,9 @@ class MainPage extends AbstractController
         }
         return $this->render('index.html.twig', [
             'playercount' => $playerCounter,
+            'nonews' => $nonews,
             'newsArray'=>$newsArray
+
         ]);
     }
 }
