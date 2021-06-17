@@ -26,6 +26,7 @@ class MainPage extends AbstractController
         $newsInPage=3;
         $repository = $this->getDoctrine()->getRepository(News::class);
         $allNews = $repository->findAll();
+        $newsArray=array();
         $nonews=false;
         if(sizeof($allNews)==0) {
             $nonews=true;
