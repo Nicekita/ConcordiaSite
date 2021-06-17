@@ -17,7 +17,7 @@ class MainPage extends AbstractController
         try {
             $jsonRequest = $JSON->decode('https://api.mcsrvstat.us/2/'.$serverhost);
             if($jsonRequest->online!=false){$playerCounter = $jsonRequest->players->online;} else
-                $playerCounter = 0;
+                $playerCounter = "сервер выключен";
         }
         catch (Exception $e){
             $playerCounter = 0;
