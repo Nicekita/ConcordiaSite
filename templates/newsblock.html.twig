@@ -1,6 +1,6 @@
 <div class="item-news">
-    <div class="item-news__img" >
-        <img src="{{ asset('img/news/'~news.image) }}">
+    <div class="item-news__img"  >
+       <a href="{{ path('specnews',{'newsid':news.id}) }}"><img src="{{ asset("img/1P.PNG") }}" WIDTH="100%"> {#<img src="{{ asset('img/news/'~news.image) }}" width="100%">#}</a>
     </div>
     <h2 class="item-news__title">{{news.header}}</h2> {# вот так примерно работают массивы и даты, надо заменить конечно все это на цикл #}
     <p class="item-news__text">{{news.text}}</p>

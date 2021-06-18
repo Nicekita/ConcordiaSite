@@ -6,10 +6,10 @@
     display: none;
     background: #100C15;
     position: fixed;
-    width: 20%;
-    height: 45%;
+    width: 40%;
+    height: 60%;
     top: 30%;
-    left: 40%;
+    left: 30%;
     z-index: 99999;
     border: solid 10px #95408C;
     border-radius: 10px;
@@ -24,7 +24,7 @@
 }
 
 .modal:hover{
-    border: solid 12px #FDAEE0;
+    border: solid 10px #FDAEE0;
 }
 
 .modal_vis {
@@ -62,14 +62,14 @@
     transform: rotate(135deg);
 }
 
-.profile-form{
-  padding: 80px 40px;
+.wrapper-profile{
+    padding: 80px 40px;
 }
 
 .profile-form__title{
     margin-bottom: 60px;
     color: white;
-    font-size: calc(8px + 34 * (100vw / 1800));
+    font-size: calc(14px + 20 * (100vw / 1800));
 }
 
 .profile-window{
@@ -128,9 +128,27 @@
     z-index: 10000;
 }
 
-.blur-none{
-    filter: 0px;
+
+
+@media screen and (max-width: 480px){
+
+    .modal {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+    }
+
+    .profile-window__text{
+        margin-top: 100px;
+    }
+
+    .modal:hover{
+        display: none;
+    }
 }
+
+
 
 
 

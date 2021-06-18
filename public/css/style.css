@@ -277,17 +277,12 @@ max-width: 100%;
     margin-bottom: 24px;
     width: 28%;
 }
-.fourth-section-block__img-size-b {
-    margin-top: 25px;
-    background-color: lightgrey;
-    height: 20%;
-}
 
 
-.fourth-section-block__img-size-s {
+.fourth-section-block__img {
     margin-top:35px;
     background-color: lightgrey;
-    height: 18%;
+    width: 100%;
 
 }
 
@@ -418,7 +413,7 @@ max-width: 100%;
 
 @media screen and (max-width: 768px){
     .wrapper{
-        max-width: 718px;
+        max-width: 725px;
     }
 
     .ground{
@@ -432,15 +427,112 @@ max-width: 100%;
     .position-background-c {
         top: 49.75%;
     }
+
+    .right-panel{
+        width: 25%;
+    }
+
+    .left-panel{
+        width: 25%;
+    }
+
+    .central-panel{
+        width: 33%;
+    }
+
+    .person{
+        font-size: 6px;
+        width: 23.5%;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
     .wrapper {
-        max-width: 460px;
+        max-width: 480px;
     }
 
     .ground {
         max-width: 480px;
+    }
+
+
+    .person {
+        display: inline-block;
+        font-size: 4px;
+        text-align: center;
+        margin: 0 0%;
+        width: 30%;
+    }
+
+    .person-title {
+        margin-top: 2px;
+    }
+
+    .central-panel__logo-first {
+        display: block;
+        margin-top: 90px;
+        padding: 0px 0px;
+
+    }
+
+    .central-panel__logo-second {
+        align-self: center;
+        margin-left: 10px;
+    }
+
+    .position-background-a {
+        top: 12.6%;
+    }
+
+    .position-background-b {
+        top: 15.2%;
+        height: 33%;
+
+    }
+
+    .position-background-c {
+        background-image: url(../img/pozfon2.svg);
+        top: 48.18%;
+    }
+
+    .second-section-button__button {
+        margin-top: 70px;
+    }
+
+    .third-section__wrapper {
+        max-width: 400px;
+        padding: 1px 10px;
+        margin-top: 240px;
+
+    }
+
+    .fourth-section-column {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+
+    .fourth-section-block {
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    .fourth-section-block__img-size-b {
+        margin-top: 25px;
+        background-color: lightgrey;
+        height: 100%;
+        z-index: 100000;
+    }
+
+
+    .fourth-section-block__img-size-s {
+        margin-top: 35px;
+        background-color: lightgrey;
+        height: 100%;
+        z-index: 10000;
+
     }
 
     .second_section__main {
@@ -453,7 +545,6 @@ max-width: 100%;
         width: 80%;
         margin-left: auto;
         margin-right: auto;
-
     }
 
     .main-section-img__img{
@@ -485,87 +576,52 @@ max-width: 100%;
         margin-top: 130px;
     }
 
-    .person {
-        display: inline-block;
-        font-size: 5px;
-        text-align: center;
-        margin: 0 0%;
-        width: 30%;
+}
+
+
+
+@media screen and (max-width: 440px) {
+    .wrapper {
+        max-width: 430px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
-    .person-title {
-        margin-top: 3px;
-    }
-
-    .central-panel__logo-first {
-        display: block;
-        margin-top: 90px;
-        padding: 0px 0px;
-
-    }
-
-    .central-panel__logo-second {
-        align-self: center;
-        margin-left: 10px;
-    }
-
-    .position-background-a {
-        top: 12.6%;
-    }
-    .position-background-b {
-        top: 15.2%;
-        height: 33%;
-
-    }
-    .position-background-c {
-        background-image: url(../img/pozfon2.svg);
-        top: 48.18%;
-    }
-
-    .second-section-button__button {
-        margin-top: 70px;
-    }
-
-    .third-section__wrapper {
-        max-width: 400px;
-        padding:1px 10px;
-        margin-top: 240px;
-
-    }
-
-     .fourth-section-column{
-         display: block;
-         margin-left: auto;
-         margin-right: auto;
-         width: 70%;
-     }
-
-    .fourth-section-block{
-        margin-bottom: 24px;
-        width: 100%;
-    }
-
-    .fourth-section-block__img-size-b {
-        margin-top: 25px;
-        background-color: lightgrey;
-        height: 100%;
-        z-index:  100000;
-    }
-
-
-    .fourth-section-block__img-size-s {
-        margin-top:35px;
-        background-color: lightgrey;
-        height: 100%;
-        z-index: 10000;
-
+    .ground {
+        max-width: 440px;
     }
 
 }
 
+    @media screen and (max-width: 420px) {
+        .wrapper {
+            max-width: 410px;
+        }
+
+        .ground {
+            max-width: 420px;
+        }
+
+        .right-panel{
+            width: 23%;
+        }
+
+        .left-panel{
+            width: 23%;
+        }
+
+        .central-panel{
+            width: 34%;
+        }
+
+    }
+
+
 @media screen and (max-width: 375px) {
     .wrapper {
-        max-width: 375px;
+        max-width: 365px;
+        padding-left: 4px;
+        padding-right: 4px;
     }
 
     .ground {
@@ -586,24 +642,47 @@ max-width: 100%;
 
     .position-background-b {
         top: 15.2%;
-        height: 31.2%;
+        height: 32.2%;
 
     }
     .position-background-c {
         background-image: url(../img/pozfon2.svg);
-        top: 46.38%;
+        top: 47.38%;
     }
 }
 
 @media screen and (max-width: 360px) {
+        .wrapper{
+            max-width: 350px ;
+        }
+        .ground{
+            max-width: 360px;
+        }
+
+        .person {
+            width: 28%;
+        }
+
+    }
+
+@media screen and (max-width: 325px) {
     .wrapper{
-        max-width: 360px ;
+        max-width: 315px ;
     }
     .ground{
-        max-width: 360px;
+        max-width: 325px;
+    }
+
+    .person {
+        width: 27%;
     }
 
 }
+
+
+
+
+
 
 
 

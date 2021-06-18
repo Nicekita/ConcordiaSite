@@ -130,7 +130,9 @@
                 {% if nonews==false %}
                     {% for news in newsArray %}
                         <div class="fourth-section-block">
-                            <div class="fourth-section-block__img-size-s"></div>
+                            <div class="fourth-section-block__img">
+                                <a href="{{ path('specnews',{'newsid':news.id}) }}"><img src="{{ asset("img/1P.PNG") }}" WIDTH="100%">{#<img src="{{ asset('img/news/'~news.image) }}"#} width="100%"></a>
+                            </div>
                             <h2 class="fourth-section-block__title">{{news.header}} </h2>
                             <p class="fourth-section-block__data">{{news.date|date("d.m.Y")}}</p>
                         </div>

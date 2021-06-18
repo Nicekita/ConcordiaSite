@@ -48,13 +48,13 @@
 .navigation__link{
     text-decoration: none;
     color:#FFFFFF;
-    font-size:  calc(9px + 5 * (100vw / 1200));
+    font-size:  calc(7px + 5 * (100vw / 1200));
 }
 
 .navigation__link:hover{
     text-decoration: none;
     color:lightgrey;
-    font-size:  calc(9px + 5 * (100vw / 1200));
+    font-size:  calc(7px + 5 * (100vw / 1200));
 }
 
 .navigation__link_color_grey{
@@ -76,7 +76,7 @@
     background-color: #FDAEE0;
     padding: 5% 0%;
     font-weight: 800;
-    font-size:  calc(8px + 6 * (100vw / 1200));
+    font-size:  calc(6px + 6 * (100vw / 1200));
     border: #FDC6E9 solid 1.5px;
     width: 100%;
 }
@@ -131,14 +131,14 @@
 
 .dropdown__title {
     color: white;
-    font-size:  calc(9px + 5 * (100vw / 1200));
+    font-size:  calc(7px + 5 * (100vw / 1200));
     cursor: pointer;
     margin-bottom: 2px;
 }
 
 .dropdown__title:hover {
     color: lightgrey;
-    font-size:  calc(9px + 5 * (100vw / 1200));
+    font-size:  calc(7px + 5 * (100vw / 1200));
     cursor: pointer;
     margin-bottom: 2px;
 }
@@ -154,7 +154,7 @@
     display: none;
     position: absolute;
     z-index: 1;
-    font-size:  calc(9px + 5 * (100vw / 1200));
+    font-size:  calc(8px + 5 * (100vw / 1200));
 }
 
 /* Ссылки внутри выпадающего */
@@ -199,25 +199,65 @@
 
 @media screen and (max-width: 768px){
     .header__wrapper{
-        max-width: 718px;
+        max-width: 725px;
+    }
+
+    .navigation{
+        width: 58%;
+    }
+
+    .header-img__Vk{
+        padding: 2px 2.5px;
+        width: 23px;
+        height: 18px;
+    }
+
+    .header-img__Discord{
+        padding: 2px 2.5px;
+        width: 23px;
+        height: 18px;
+        margin-left: 2px;
+    }
+
+    .profile-button{
+        width: 16%;
+    }
+
+    .header-img{
+        width: 15%;
+        margin-top: 35px;
+
     }
 }
 
 @media screen and (max-width: 480px) {
     .header__wrapper {
-        max-width: 460px;
+        max-width: 480px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .header__wrapper {
+        max-width: 430px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .navigation{
+        width: 63%;
     }
 
     .header-img__Vk{
-        padding: 2px 2.5px;
-        width: 22px;
-        height: 19px;
+        padding: 2px 1.5px;
+        width: 20px;
+        height: 17px;
     }
 
     .header-img__Discord{
-        padding: 2px 2.5px;
-        width: 22px;
-        height: 19px;
+        padding: 2px 1.5px;
+        width: 20px;
+        height: 17px;
+        margin-left: 1px;
     }
 
     .navigation__item {
@@ -234,9 +274,17 @@
 
 }
 
+@media screen and (max-width: 420px) {
+    .header__wrapper {
+        max-width: 410px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .header__wrapper {
-        max-width: 375px;
+        max-width: 355px;
+        padding-right: 4px;
+        padding-right: 4px;
     }
 
     .header-img__Vk{
@@ -274,11 +322,22 @@
 }
 
 @media screen and (max-width: 360px) {
+    .wrapper {
+        max-width: 350px;
+    }
+
+    .ground {
+        max-width: 360px;
+    }
+}
+
+
+@media screen and (max-width: 325px) {
     .header__wrapper{
-        max-width: 360px ;
+        max-width: 325px ;
     }
     .ground{
-        max-width: 360px;
+        max-width: 325px;
     }
 
 }

@@ -17,11 +17,11 @@
             <div class="otd-page-news__grid-column">
                 <div class="otd-item-news">
                     <div class="otd-item-news__block-img">
-                        <img src="{{asset ("img/1.jpg")}}" width="100%">
+                        <img src="{{ asset('img/news/'~news.image) }}" width="100%">
                     </div>
-                    <h2 class="otd-item-news__title">ПРЕДРЕЛИЗ ПРОЕКТА 0.4.3</h2>
-                    <p class="otd-item-news__text">Мы реализовали x,y,z Тут нужно добавить ещё какого-нибудь текста, чтоб он автоматически обрезался после трёхю</p>
-                    <p class="otd-item-news__date">20.03.2021</p>
+                    <h2 class="otd-item-news__title">{{news.header}}</h2>
+                    <p class="otd-item-news__text">{{news.text}}</p>
+                    <p class="otd-item-news__date">{{news.date|date("d.m.Y")}}</p>
                 </div>
             </div>
 
