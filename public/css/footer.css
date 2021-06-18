@@ -49,12 +49,12 @@ background-attachment: fixed;
     padding:0px 27px;
     font-weight: 800;
     margin-bottom: 20px;
-    font-size: calc(8px + 7 * (100vw / 1200));
+    font-size: calc(7px + 7 * (100vw / 1200));
 
 }
 
 .nav-page-footer__item {
-    font-size: calc(7px + 7 * (100vw / 1200));
+    font-size: calc(6px + 7 * (100vw / 1200));
     font-weight: 400;
     color:  #2C3840;
     margin-top: 4px;
@@ -92,15 +92,6 @@ background-attachment: fixed;
     margin-right: 15px;
 }
 
-.page-footer-hr{
-    z-index: 10000;
-    background-color: white;
-}
-.page-footer__hr{
-    color: #2C3840;
-    margin-top: 148px;
-    background-color: #0B070D;
-}
 
 
 .pozfon6 {
@@ -194,6 +185,12 @@ background-attachment: fixed;
         height: 540px;
 
     }
+
+    .nav-page-footer__link {
+        font-size: 6px;
+
+    }
+
 
 }
 

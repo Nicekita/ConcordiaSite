@@ -115,21 +115,33 @@
     font-size: 18px;
 }
 
-@media screen and(max-width: 375px){
+@media screen and (max-width: 768px){
+
     .profile__wrapper{
-        margin-top: 130px;
         display:block;
-        margin-bottom: 360px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .wrapper{
-        max-width: 360px;
+    .profile-player{
+        display: block;
+        width: 35%;
+        margin-bottom: 50px;
+        margin-left: 5%;
     }
 
     .profile-info{
-        width: 80%;
-        height: 100%;
-        margin-top: 30px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .wrapper{
+        max-width: 410px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
 }
