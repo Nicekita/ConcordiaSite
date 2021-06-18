@@ -35,8 +35,6 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
         catch (Exception $e){
             $imageUrl = null;
         }
-
-
         $repository = $this->getDoctrine()->getRepository(Player::class);
         $requestedPlayer = $repository->findOneBy(['UUID'=>$userid]);
         $data = [
@@ -48,9 +46,12 @@ class SimpleController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
             $data['TownName']=$requestedPlayer->getTown()->getName();
             $data['TownCash']=$requestedPlayer->getTown()->getCash();
             $data['TownOwner']=$requestedPlayer->getTown()->getOwner();
-        } else {$data['TownName']=null;
-        $data['TownCash']=null;
-        $data['TownOwner']=null;}
+        }
+        else {
+            $data['TownName']=null;
+            $data['TownCash']=null;
+            $data['TownOwner']=null;
+        }
 
         return $this->render('profile.html.twig',$data);
     }

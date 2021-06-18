@@ -5,9 +5,9 @@ index:
     path: /
     controller: App\Controller\MainPage::index
     #schemes:    [https]
-addnews:
-    path: /newseditor
-    controller: App\Controller\NewsController::add
+#addnews:
+    #path: /newseditor
+    #controller: App\Controller\NewsController::add
     #schemes:    [https]
 newsadded:
     path: /api/news

@@ -16,8 +16,8 @@ abstract class APIObject extends AbstractController
     protected function getFileUploader():FileUploader{
         return $this->fileUploader;
     }
-    function init(FileUploader $fileuploader):Response{
-        $this->fileUploader=$fileuploader;
+    function init(FileUploader $fileUploader):Response{
+        $this->fileUploader=$fileUploader;
         $request = Request::createFromGlobals();
         $response = new JsonResponse();
         //get gets through
@@ -54,8 +54,8 @@ abstract class APIObject extends AbstractController
         $response->setData($data);
         return $response;
     }
-    abstract function addObject(Request $request):array;
-    abstract function removeObject(Request $request):array;
-    abstract function updateObject(Request $request):array;
-    abstract function getObject(Request $request):array;
+    protected abstract function addObject(Request $request):array;
+    protected abstract function removeObject(Request $request):array;
+    protected abstract function updateObject(Request $request):array;
+    protected abstract function getObject(Request $request):array;
 }

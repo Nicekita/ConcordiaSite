@@ -9,11 +9,13 @@ use Symfony\Component\HttpFoundation\Response;
 
 class NewsController extends AbstractController
 {
-    public function add(): Response
+    /*public function add(): Response
     {
         return $this->render('newseditor.html.twig',[
             ]);
-    }
+    }*/
+
+
     public function specific(int $newsid): Response
     {
         $repository = $this->getDoctrine()->getRepository(News::class);
@@ -24,7 +26,6 @@ class NewsController extends AbstractController
     }
     public function index(int $page):Response
     {
-
         $newsInPage=6;
         $repository = $this->getDoctrine()->getRepository(News::class);
         $allNews = $repository->findAll();
@@ -33,8 +34,11 @@ class NewsController extends AbstractController
         for($i=0;$i<$newsInPage&&($page*$newsInPage)+$i<sizeof($allNews);$i++){
             $newsArray[$i]=$allNews[($page*$newsInPage)+$i];
         }
+        $pageMax=sizeof($allNews)/$newsInPage;
         return $this->render('news.html.twig', [
             'newsarray' => $newsArray,
+            'pageMax'=>round($pageMax),
+            'currentPage'=>$page+1
         ]);
     }
 

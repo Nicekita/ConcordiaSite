@@ -1,7 +1,6 @@
 *{
     text-decoration: none;
 }
-
 .modal {
     display: none;
     background: #100C15;
@@ -15,8 +14,6 @@
     border-radius: 10px;
     filter: none;
     min-width: 15%;
-
-
 }
 
 #modal{
